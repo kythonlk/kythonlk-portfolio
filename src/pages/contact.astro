@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/page.astro';
+---
+
+<Layout>
+
+<section class="py-12 bg-gray-900/40 text-gray-900">
+    <div class="container mx-auto px-4 md:px-6 lg:px-8">
+        <div class="max-w-lg mx-auto">
+            <div class="text-center">
+            <div class="space-y-6">
+                <div>
+                    <h3 class="text-xl font-semibold">Email</h3>
+                    <p class="mt-2">
+                        <a href="mailto:kythonlk@gmail.com" class="text-blue-100 hover:underline">kythonlk@gmail.com</a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold">Phone</h3>
+                    <p class="mt-2">
+                        <a href="tel:+971562982733" class="text-blue-100 hover:underline">+971 56 298 2733</a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold">Location</h3>
+                    <p class="mt-2">Sharjah, UAE</p>
+                </div>
+            </div>
+        </div>
+            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                <input type="hidden" name="access_key" value="a5d1b04b-3446-4cfb-8231-bc466a7abab5">
+                <input type="hidden" name="subject" value="New Submission from Web3Forms">
+                <input type="hidden" name="from_name" value="Your Website Name">
+                <input type="hidden" name="ccemail" value="partner@example.com">
+                <input type="hidden" name="replyto" value="customer@example.com">
+                <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Your Email</label>
+                    <input type="email" name="email" id="email" required class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                
+                <div>
+                    <label for="first-name" class="block text-sm font-medium text-gray-700">First Name</label>
+                    <input type="text" name="First Name" id="first-name" required class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                    <textarea name="message" id="message" required rows="4" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"></textarea>
+                </div>
+                
+                <div class="flex justify-center">
+                    <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-md shadow hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Submit Form</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+</Layout>

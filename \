@@ -25,19 +25,21 @@ const databases = [
   { name: 'Postgres', icon: 'postgresql.svg' },
   { name: 'Supabase', icon: 'supabase.svg' },
   { name: 'Firebase', icon: 'firebase.svg' },
-  { name: 'SQLite', icon: 'sqlite.svg' },
+  { name: 'SQLite', icon: 'sql.svg' },
   { name: 'Redis', icon: 'redis.svg' },
 ];
 
 const frameworks = [
   { name: 'Htmx', icon: 'htmx.svg' },
   { name: 'Wordpress', icon: 'wordpress.svg' },
-  { name: 'Express.js', icon: 'express.svg' },
+  { name: 'Express', icon: 'express.svg' },
   { name: 'Next.js', icon: 'nextdotjs.svg' },
+  { name: 'React', icon: 'react.svg' },
   { name: 'React Native', icon: 'react.svg' },
   { name: 'Laravel', icon: 'laravel.svg' },
   { name: 'Astro', icon: 'astro.svg' },
-  { name: 'ASP.NET', icon: 'dotnet.svg' },
+  { name: 'Gin', icon: 'gin.svg' },
+  { name: 'Asp.NET', icon: 'dotnet.svg' },
 ];
 
 const stylingMarkup = [
@@ -55,7 +57,7 @@ const devOps = [
   { name: 'Docker', icon: 'docker.svg' },
   { name: 'GitHub', icon: 'github.svg' },
   { name: 'Nginx', icon: 'nginx.svg' },
-  { name: 'Aws', icon: 'amazonaws.svg' },
+  { name: 'Aws', icon: 'aws.svg' },
 ];
 ---
 
@@ -65,19 +67,19 @@ const devOps = [
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
       {tools.map((tool) => (
         <div key={tool.name} class="p-6 flex flex-col items-center justify-center">
-          <h2 class="text-white text-xl font-bold mb-4">{tool.category}</h2>
+          <h2 class="text-white text-xl md:text-2xl font-bold mb-4">{tool.category}</h2>
           <img
             src={`${baseUrl}/${tool.icon}`}
             alt={tool.name}
             class="w-12 h-12 mb-4"
           />
-          <h3 class="text-base font-semibold">{tool.name}</h3>
+          <h3 class="text-base md:text-xl font-semibold">{tool.name}</h3>
         </div>
       ))}
     </div>
   </div>
   <div class="flex-row md:flex">
-<div class="container px-4 mt-4">
+<div class="container px-4 mt-8">
   <div class="w-full ">
     <div class="bg-white/50 shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300 ease-in-out">
       <h3 class="text-xl font-semibold mb-4 text-center">Programming Languages</h3>
@@ -96,10 +98,10 @@ const devOps = [
     </div>
   </div>
 </div>
-<div class="container mx-auto px-4 mt-4">
+<div class="container mx-auto px-4 mt-8">
   <div class="w-full">
     <div class="bg-white/50 shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300 ease-in-out">
-      <h3 class="text-xl font-semibold mb-4 text-center">Frameworks and CMS</h3>
+      <h3 class="text-xl font-semibold mb-4 text-center">Programming Languages</h3>
       <div class="grid grid-cols-3 md:grid-cols-4 gap-2">
         {frameworks.map((language) => (
           <div key={language.name} class="text-center">
@@ -115,10 +117,10 @@ const devOps = [
     </div>
   </div>
 </div>
-<div class="container mx-auto px-4 mt-4">
+<div class="container mx-auto px-4 mt-8">
   <div class="w-full">
     <div class="bg-white/50 shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300 ease-in-out">
-      <h3 class="text-xl font-semibold mb-4 text-center">Databases and Data Providers</h3>
+      <h3 class="text-xl font-semibold mb-4 text-center">Programming Languages</h3>
       <div class="grid grid-cols-3 md:grid-cols-4 gap-2">
         {databases.map((language) => (
           <div key={language.name} class="text-center">
@@ -134,24 +136,5 @@ const devOps = [
     </div>
   </div>
 </div>
-</div>
-<div class="container mx-auto px-4 mt-4">
-  <div class="w-full">
-    <div class="bg-white/50 shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300 ease-in-out">
-      <h3 class="text-xl font-semibold mb-4 text-center">Dev Ops and Virsion control</h3>
-      <div class="grid grid-cols-3 md:grid-cols-5 gap-2">
-        {devOps.map((language) => (
-          <div key={language.name} class="text-center">
-            <img 
-              src={`${baseUrl}/${language.icon}`} 
-              alt={language.name} 
-              class="mx-auto w-6 h-6"
-            />
-            <span class="block text-sm mt-2 text-gray-800">{language.name}</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  </div>
 </div>
 </section>
