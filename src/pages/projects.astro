@@ -1,67 +1,36 @@
 ---
 import Layout from '../layouts/page.astro';
+
+const projects = [
+  { name: "Api Testing Client", description: "Api testing tool made with GO lang.(TUI)", link: "https://github.com/Kythonlk/Fastreq" },
+  { name: "Babylux Backend", description: "Go lang backend for e-commerce site with jwt auth", link: "https://github.com/Kythonlk/babylux-backend" },
+  { name: "LocalStorage Client", description: "TypeScript npm package for use localStorage easily", link: "https://github.com/Kythonlk/LocalStorageClient" },
+  { name: "Finance Management", description: "Personal finance management app made with react and localStorage", link: "https://my-finance-manager.netlify.app/" },
+  { name: "Task-Reminder", description: "A todo app with alarm for reminders", link: "https://kythonlk.github.io/Task-Reminder/" },
+  { name: "Babylux invoice", description: "A invoice generator for babylux using React", link: "https://babylux-invoice.vercel.app" },
+  { name: "Excel to SQL", description: "Simple Excel to SQL converter in React", link: "https://excel-sql.netlify.app/" },
+  { name: "Business Portfolio Template", description: "Astro simple business portfolio website", link: "https://dev.kythonlk.com" },
+  { name: "Guaranteed Lowest Price", description: "A wordpress plugin for guaranteed lowest price", link: "https://github.com/Kythonlk/guaranteed_lowest_price" },
+  { name: "Warranty Option For Woocommerce", description: "WooCommerce plugin that can add warranty years", link: "https://github.com/Kythonlk/Warranty-Option-For-Woocommerce" },
+];
 ---
 
 <Layout>
 <section class="py-12 bg-gray-900/30 text-gray-900">
   <div class="container mx-auto px-4 md:px-6 lg:px-8">
-    <h2 class="text-3xl font-bold text-center mb-12 text-white">My Projects</h2>
+    <h2 class="text-3xl font-bold text-center mb-12 text-black">My Projects</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <div class="bg-gray-100/30 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
-        <img src="/path-to-project-1-image.jpg" alt="Project 1" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Project 1 Name</h3>
-          <p class="text-gray-700 mb-4">A brief description of Project 1, highlighting the main technologies used and the problem it solves.</p>
-          <a href="#" class="text-blue-500 hover:underline">View Project</a>
+      {projects.map((project, index) => (
+        <div key={index} class="bg-gray-100/30 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
+          <img src={`https://picsum.photos/seed/${encodeURIComponent(project.name)}/400/200`} alt={project.name} class="w-full h-48 object-cover">
+          <div class="p-6 flex flex-col justify-between">
+            <h3 class="text-xl font-semibold mb-2 text-black">{project.name}</h3>
+            <p class="text-gray-700 mb-4">{project.description}</p>
+            <a href={project.link} target="_blank" rel="noopener noreferrer" class="text-blue-900 hover:underline">View Project</a>
+          </div>
         </div>
-      </div>
-
-      <div class="bg-gray-100/30 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
-        <img src="/path-to-project-2-image.jpg" alt="Project 2" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Project 2 Name</h3>
-          <p class="text-gray-700 mb-4">An overview of Project 2, including its unique features and the value it brings to its users.</p>
-          <a href="#" class="text-blue-500 hover:underline">View Project</a>
-        </div>
-      </div>
-
-            <div class="bg-gray-100/30 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
-        <img src="/path-to-project-2-image.jpg" alt="Project 2" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Project 2 Name</h3>
-          <p class="text-gray-700 mb-4">An overview of Project 2, including its unique features and the value it brings to its users.</p>
-          <a href="#" class="text-blue-500 hover:underline">View Project</a>
-        </div>
-      </div>
-
-      <div class="bg-gray-100/30 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
-        <img src="/path-to-project-2-image.jpg" alt="Project 2" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Project 2 Name</h3>
-          <p class="text-gray-700 mb-4">An overview of Project 2, including its unique features and the value it brings to its users.</p>
-          <a href="#" class="text-blue-500 hover:underline">View Project</a>
-        </div>
-      </div>
-
-      <div class="bg-gray-100/30 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
-        <img src="/path-to-project-2-image.jpg" alt="Project 2" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Project 2 Name</h3>
-          <p class="text-gray-700 mb-4">An overview of Project 2, including its unique features and the value it brings to its users.</p>
-          <a href="#" class="text-blue-500 hover:underline">View Project</a>
-        </div>
-      </div>
-      <div class="bg-gray-100/30 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
-        <img src="/path-to-project-2-image.jpg" alt="Project 2" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Project 2 Name</h3>
-          <p class="text-gray-700 mb-4">An overview of Project 2, including its unique features and the value it brings to its users.</p>
-          <a href="#" class="text-blue-500 hover:underline">View Project</a>
-        </div>
-      </div>
-
+      ))}
     </div>
   </div>
 </section>
-
 </Layout>

@@ -1,116 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Terminal Portfolio</title>
-    <style>
-      body,
-      html {
-        height: 100%;
-        margin: 0;
-        background-color: #000;
-        color: #fff;
-        font-family: "Courier New", Courier, monospace;
-      }
-      #window {
-        width: 80%;
-        max-width: 1200px;
-        height: 800px;
-        margin: 2rem auto;
-        border: 2px solid #333;
-        border-radius: 8px;
-        background-color: #000;
-        display: flex;
-        flex-direction: column;
-      }
-
-      #title-bar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.5rem;
-        background-color: #333;
-        color: #fff;
-        border-top-left-radius: 6px;
-        border-top-right-radius: 6px;
-      }
-
-      #title {
-        font-weight: bold;
-      }
-
-      #window-controls {
-        display: flex;
-      }
-
-      .window-control {
-        background: none;
-        border: none;
-        color: #fff;
-        cursor: pointer;
-        padding: 0 0.5rem;
-        font-size: 1rem;
-      }
-
-      #terminal {
-        padding: 10px;
-        overflow-y: auto;
-        flex-grow: 1;
-      }
-      #output {
-        white-space: pre;
-        margin-bottom: 10px;
-      }
-      #output > div {
-        color: red;
-        padding-block: 5px;
-      }
-      .input-line {
-        display: flex;
-        align-items: center;
-      }
-
-      .prompt {
-        color: #0f0;
-        margin-right: 5px;
-      }
-
-      #input {
-        flex-grow: 1;
-        background-color: #000;
-        color: #fff;
-        border: none;
-        padding: 5px;
-        font-family: "Courier New", Courier, monospace;
-      }
-
-      #input:focus {
-        outline: none;
-      }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div id="window">
-      <div id="title-bar">
-        <div id="title">Terminal</div>
+  <body
+    class="bg-black text-green-400 font-mono h-screen flex items-center justify-center"
+  >
+    <div
+      id="window"
+      class="w-4/5 max-w-6xl h-[600px] border-2 border-gray-700 rounded-lg flex flex-col"
+    >
+      <div
+        id="title-bar"
+        class="flex justify-between items-center p-2 bg-gray-800 rounded-t-lg"
+      >
+        <div id="title" class="font-bold">Terminal</div>
         <div id="window-controls">
-          <button class="window-control" onclick="closeWindow()">X</button>
+          <button class="text-white hover:text-red-500" onclick="closeWindow()">
+            X
+          </button>
         </div>
       </div>
-      <div id="terminal">
-        <div>
-          <span class="prompt">kythonlkos@admin ~:</span
-          ><span id="output"></span>
-        </div>
-        <div id="input-line" class="input-line">
-          <span class="prompt">kythonlkos@admin ~:</span>
-          <input type="text" id="input" autofocus />
+      <div id="terminal" class="p-4 flex-grow flex flex-col justify-end">
+        <div
+          id="output"
+          class="overflow-hidden flex-grow mb-4 whitespace-pre-line"
+        ></div>
+        <div id="input-line" class="flex items-center">
+          <span class="text-yellow-500 mr-2">$</span>
+          <input
+            type="text"
+            id="input"
+            class="bg-black text-green-400 border-none flex-grow focus:outline-none"
+            autofocus
+          />
         </div>
       </div>
     </div>
+
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const terminal = document.getElementById("terminal");
         const inputField = document.getElementById("input");
+        const output = document.getElementById("output");
 
         inputField.focus();
 
@@ -126,82 +61,107 @@
             inputField.focus();
           }
         });
+
+        appendOutput("Welcome! Type 'hlp' for commands.");
       });
 
-      let currentState = "default";
       let projects = [
-        {
-          name: "Kythonlk",
-          description:
-            "Kythonlk is my brand name for more details type : about",
-        },
-        {
-          name: "About",
-          description:
-            "Hello, I'm Kavindu Harshana I'm a full stack developer.",
-        },
-        {
-          name: "Resume",
-          description: "I have a good experience in web development.That's it",
-        },
-        {
-          name: "Tech Stack",
-          description:
-            "Php , Laravel, Javascript, React, React Native, Nodejs, MySql, PostgreSql ,nextjs , c# many more ",
-        },
-        { name: "Projects", description: "Description of Project." },
-        {
-          name: "Conatct",
-          description: "Contact me at: https://github.com/kythonlk",
-        },
+        { name: "Api Testing Client", description: "Api testing tool made with GO lang.(TUI)" , link:"https://github.com/Kythonlk/Fastreq" },
+        { name: "babylux-backend", description: "Go lang backend for e-commerce site with jwt auth" , link: "https://github.com/Kythonlk/babylux-backend"},
+        { name: "LocalStorageClient", description: "TypeScript npm package for use localStorage easily", link: "https://github.com/Kythonlk/LocalStorageClient"},
+        { name: "finance-management", description: "Personal finance management app made with react and localStorage", link: "https://my-finance-manager.netlify.app/" },
+        { name: "Task-Reminder", description: "A todo app with alarm for reminders", link: "https://kythonlk.github.io/Task-Reminder/" },
+        { name: "babylux-invoice", description: "A invoice generator for babylux using React", link: "https://babylux-invoice.vercel.app" },
+        { name: "Excel to SQL", description: "Simple Excel to SQL converter in React", link: "https://excel-sql.netlify.app/" },
+        { name: "Business Portfolio Template", description: "Astro simple business portfolio website", link: "https://dev.kythonlk.com" },
+        { name: "guaranteed_lowest_price", description: "A wordpress plugin for guaranteed lowest price", link: "https://github.com/Kythonlk/guaranteed_lowest_price" },
+        { name: "Warranty-Option-For-Woocommerce", description: "WooCommerce plugin that can add warranty years ", link: "https://github.com/Kythonlk/Warranty-Option-For-Woocommerce" },
       ];
 
       function executeCommand(command) {
+        switch (command.toLowerCase()) {
+          case "hlp":
+            appendOutput(`
+Commands: 
+  abt - About me 
+  skl - My skills 
+  prj - My projects
+  exp - Work experience
+  cnt - Contact info
+  clr - Clear terminal
+            `);
+            break;
+          case "abt":
+            appendOutput(
+              "I'm Kavindu Harshana, a full stack developer. I work with Go lang in backend, React and React Native in front end."
+            );
+            break;
+          case "skl":
+            appendOutput(`
+Skills:
+ - Backend: GO, Express,
+ - Frontend: React (Next.js , Vite, Astro), React Native (Expo , Metro bundler).
+ - Database: MySQL, SQLite, MongoDB , Postgres
+ - Other: Git, RESTful APIs
+            `);
+            break;
+          case "prj":
+            let projectList = projects
+              .map((p, index) => `  ${index + 1}. ${p.name}: ${p.description}`)
+              .join("\n");
+            appendOutput("Projects:\n" + projectList);
+            break;
+          case "exp":
+            appendOutput(`
+Work Experience:
+1. Senior Software Developer
+   Extra Co Group (Sep 2023 - Present)
+
+2. Software Engineer
+   Dhabione (Feb 2023 - Sep 2023)
+
+3. Associate Software Engineer
+   Lead Lanka International (Jul 2022 - Feb 2023)
+
+4. Wordpress Developer
+   Cyber Concepts Sri Lanka (Aug 2021 - Jun 2022)
+
+5. Trainee Web Developer
+   SATASME HOLDINGS PVT LTD (Jan 2020 - Dec 2021)
+   `);
+            break;
+          case "cnt":
+            appendOutput(`
+Contact:
+  Email: kythonlk@gmail.com
+  GitHub: github.com/kythonlk
+            `);
+            break;
+          case "clr":
+            clearOutput();
+            break;
+          default:
+            appendOutput(
+              `Unknown command: ${command}. Type 'hlp' for commands.`
+            );
+        }
+      }
+
+      function appendOutput(text) {
         const output = document.getElementById("output");
         const newOutput = document.createElement("div");
-
-        if (currentState === "ls" && !isNaN(command)) {
-          let index = parseInt(command, 10) - 1;
-          if (index >= 0 && index < projects.length) {
-            newOutput.textContent = `${projects[index].name}: ${projects[index].description}`;
-          } else {
-            newOutput.textContent = "Invalid project number.";
-          }
-          currentState = "default";
-        } else {
-          switch (command.toLowerCase()) {
-            case "ls":
-              let listing = projects
-                .map((p, index) => `${index + 1}. ${p.name}`)
-                .join("\n");
-              newOutput.textContent = listing;
-              currentState = "ls";
-              break;
-            case "about":
-              newOutput.textContent =
-                "Hello, I'm Kavindu Harshana I'm a full stack developer.";
-              break;
-            case "resume":
-              newOutput.textContent =
-                "I have a good experience in web development.That's it";
-              break;
-            case "tech-stack":
-              newOutput.textContent =
-                "Php , Laravel, Javascript, React, React Native, Nodejs, MySql, PostgreSql ,nextjs , c# many more ";
-              break;
-
-            case "contact":
-              newOutput.textContent =
-                "Contact me at: https://github.com/kythonlk";
-              break;
-            default:
-              newOutput.textContent =
-                "Command not found. type 'ls' to see command list.";
-          }
-        }
-
+        newOutput.textContent = text;
+        newOutput.className = "mb-2";
         output.appendChild(newOutput);
         output.scrollTop = output.scrollHeight;
+      }
+
+      function clearOutput() {
+        document.getElementById("output").innerHTML = "";
+      }
+
+      function closeWindow() {
+        window.location.href = "/";
       }
     </script>
   </body>
