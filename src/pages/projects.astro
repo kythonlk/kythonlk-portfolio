@@ -1,36 +1,66 @@
 ---
 import Layout from '../layouts/page.astro';
+import Dhbaione from '../images/dhabione.png'
 
-const projects = [
-  { name: "Api Testing Client", description: "Api testing tool made with GO lang.(TUI)", link: "https://github.com/Kythonlk/Fastreq" },
-  { name: "Babylux Backend", description: "Go lang backend for e-commerce site with jwt auth", link: "https://github.com/Kythonlk/babylux-backend" },
-  { name: "LocalStorage Client", description: "TypeScript npm package for use localStorage easily", link: "https://github.com/Kythonlk/LocalStorageClient" },
-  { name: "Finance Management", description: "Personal finance management app made with react and localStorage", link: "https://my-finance-manager.netlify.app/" },
-  { name: "Task-Reminder", description: "A todo app with alarm for reminders", link: "https://kythonlk.github.io/Task-Reminder/" },
-  { name: "Babylux invoice", description: "A invoice generator for babylux using React", link: "https://babylux-invoice.vercel.app" },
-  { name: "Excel to SQL", description: "Simple Excel to SQL converter in React", link: "https://excel-sql.netlify.app/" },
-  { name: "Business Portfolio Template", description: "Astro simple business portfolio website", link: "https://dev.kythonlk.com" },
-  { name: "Guaranteed Lowest Price", description: "A wordpress plugin for guaranteed lowest price", link: "https://github.com/Kythonlk/guaranteed_lowest_price" },
-  { name: "Warranty Option For Woocommerce", description: "WooCommerce plugin that can add warranty years", link: "https://github.com/Kythonlk/Warranty-Option-For-Woocommerce" },
-];
+const projects = {
+  client: [
+  { name: "Tinylux Ecommerce", description: "E-commerce site build with Go lang backend and react(nextjs) front end with stripe checkout", link: "https://tinylux.vercel.app/", tags: ["Go", "E-commerce","React","Next.js","Mongodb","Stripe"] },
+  { name: "Babylux invoice", description: "A invoice generator for babylux using React", link: "https://babylux-invoice.vercel.app", tags: ["React", "Finance","Invoice","Pdf"] },
+    { name: "Business Portfolio Template", description: "Astro simple business portfolio website", link: "https://dev.kythonlk.com", tags: ["Astro", "Portfolio"] },
+    { name: "Dhabione", description: "E-commerce website build with wordpress for 10k daily users", link: "https://dhabione.com", tags: ["WordPress", "WooCommerce","Bootstrap"],image: Dhbaione},
+  ],
+  office: [
+  { name: "LocalStorage Client", description: "TypeScript npm package for use localStorage easily", link: "https://github.com/Kythonlk/LocalStorageClient", tags: ["TypeScript", "NPM","State management"] },
+    { name: "Guaranteed Lowest Price", description: "A wordpress plugin for guaranteed lowest price", link: "https://github.com/Kythonlk/guaranteed_lowest_price", tags: ["WordPress", "E-commerce"] },
+    { name: "Warranty Option For Woocommerce", description: "WooCommerce plugin that can add warranty years", link: "https://github.com/Kythonlk/Warranty-Option-For-Woocommerce", tags: ["WordPress", "WooCommerce"] },
+    { name: "Excel to SQL", description: "Simple Excel to SQL converter in React", link: "https://excel-sql.netlify.app/", tags: ["React", "Sql", "Excel"] },
+  ],
+  hobby: [
+  { name: "Api Testing Client", description: "Api testing tool made with GO lang.(TUI)", link: "https://github.com/Kythonlk/Fastreq", tags: ["Go", "CLI","Tui"] },
+    { name: "Task-Reminder", description: "A todo app with alarm for reminders", link: "https://kythonlk.github.io/Task-Reminder/", tags: ["JavaScript", "html", "Tailwindcss","localStorage "] },
+  { name: "Finance Management", description: "Personal finance management app made with react and localStorage", link: "https://my-finance-manager.netlify.app/", tags: ["React", "Finance","LocalStorage"] },
+  ],
+};
 ---
 
 <Layout>
-<section class="py-12 bg-gray-900/30 text-gray-900">
-  <div class="container mx-auto px-4 md:px-6 lg:px-8">
-    <h2 class="text-3xl font-bold text-center mb-12 text-black">My Projects</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      {projects.map((project, index) => (
-        <div key={index} class="bg-gray-100/30 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
-          <img src={`https://picsum.photos/seed/${encodeURIComponent(project.name)}/400/200`} alt={project.name} class="w-full h-48 object-cover">
-          <div class="p-6 flex flex-col justify-between">
-            <h3 class="text-xl font-semibold mb-2 text-black">{project.name}</h3>
-            <p class="text-gray-700 mb-4">{project.description}</p>
-            <a href={project.link} target="_blank" rel="noopener noreferrer" class="text-blue-900 hover:underline">View Project</a>
+  <section class="py-12 bg-gray-900/20 text-gray-900">
+    <div class="container mx-auto px-4 md:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center mb-12 text-black">My Projects</h2>
+      
+      {Object.entries(projects).map(([category, projectList]) => (
+        <div key={category} class="mb-12">
+          <h3 class="text-2xl font-semibold text-black mb-6 capitalize">{category} Projects</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {projectList.map((project, index) => (
+            <div key={index} class="bg-white/60 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:scale-105">
+                {project.image ? (
+                  <img src={project.image.src} alt={project.name} class="w-full h-60 object-cover border-balck border" />
+                ) : (
+                  <img src={`https://picsum.photos/seed/${encodeURIComponent(project.name)}/400/200`} alt={project.name} class="w-full h-48 object-cover" />
+                )}
+                <div class="p-6 flex flex-col justify-between">
+                  <h4 class="text-xl font-bold mb-2 text-gray-900">{project.name}</h4>
+                  <p class="text-gray-600 mb-4">{project.description}</p>
+                  <div class="flex flex-wrap mb-4">
+                    {project.tags.map(tag => (
+                      <span key={tag} class="bg-blue-100 text-blue-900 text-xs font-medium mr-2 px-2.5 py-0.5 rounded">{tag}</span>
+                    ))}
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:underline">View Project</a>
+                    <a href={`https://github.com/Kythonlk`} target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-gray-900">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                        <path d="M12 2C6.478 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.683-.217.683-.484 0-.238-.009-.868-.014-1.703-2.782.605-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.607.069-.607 1.003.07 1.53 1.03 1.53 1.03.893 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.254-4.555-1.11-4.555-4.944 0-1.091.39-1.985 1.03-2.682-.103-.253-.447-1.272.097-2.65 0 0 .84-.269 2.75 1.025A9.579 9.579 0 0112 6.844a9.58 9.58 0 012.506.337c1.91-1.294 2.75-1.025 2.75-1.025.545 1.378.201 2.397.099 2.65.642.697 1.029 1.591 1.029 2.682 0 3.842-2.338 4.687-4.566 4.936.36.309.682.921.682 1.854 0 1.338-.012 2.42-.012 2.75 0 .27.181.58.688.482C19.135 20.165 22 16.418 22 12c0-5.523-4.478-10-10-10z" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       ))}
     </div>
-  </div>
-</section>
+  </section>
 </Layout>

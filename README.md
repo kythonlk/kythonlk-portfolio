@@ -4,7 +4,7 @@
 ### How to use it 
 
 ```
-git clone https://github.com/Kythonlk/New-portfolio
+git clone https://github.com/Kythonlk/kythonlk_portfolio
 ```
 
 ```
