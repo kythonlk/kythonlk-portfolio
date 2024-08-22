@@ -1,0 +1,27 @@
+---
+import Layout from "../../layouts/page.astro";
+
+export async function getStaticPaths() {
+  const response = await fetch('http://localhost:4321/posts.json');
+  const posts = await response.json();
+
+    return posts.map(({ link, title, content, img , date }) => {
+    return {
+      params: { slug :link },
+      props: { title , content, img , date},
+    };
+  });
+}
+
+const { title, content, img , date} = Astro.props;
+---
+<Layout>
+  <div class="max-w-7xl mx-auto p-10 bg-gray-700/30">
+    <div class="mb-6">
+      <img src={img} alt={title} class="w-full h-[400px] object-cover rounded-lg shadow-md" />
+    </div>
+    <h1 class="text-4xl font-bold mb-4 text-gray-900">{title}</h1>
+    <p class="text-base text-gray-100 mb-12">Published on {new Date(date).toLocaleDateString()}</p>
+    <div class="prose prose-lg max-w-none text-sky-100" set:html={content}></div>
+  </div>
+</Layout>

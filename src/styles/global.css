@@ -143,16 +143,15 @@ hr {
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
-	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
 	clip: rect(1px 1px 1px 1px);
-	/* maybe deprecated but we need to support legacy browsers */
 	clip: rect(1px, 1px, 1px, 1px);
-	/* modern browsers, clip-path works inwards from each corner */
 	clip-path: inset(50%);
-	/* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
 }
 
+.expert > p{
+font-size:12px;
+}
 
 
 
@@ -225,4 +224,78 @@ hr {
 
 .animate-scale-in {
   animation: scaleIn 0.3s ease-out forwards;
+}
+
+
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  margin-top: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+/* Code blocks */
+pre {
+  background-color: #1a202c;
+  color: #f7fafc;
+  padding: 1rem;
+  border-radius: 0.375rem;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+pre code {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.875rem;
+  color: #f7fafc;
+}
+
+/* Inline code */
+code {
+  background-color: #edf2f7;
+  color: #e53e3e;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.875rem;
+}
+
+/* Blockquote */
+blockquote {
+  border-left: 4px solid #3182ce;
+  padding-left: 1rem;
+  color: #2d3748;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  background-color: #f7fafc;
+  padding: 1rem;
+  border-radius: 0.375rem;
 }
