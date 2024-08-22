@@ -2,7 +2,7 @@
 import Layout from "../../layouts/page.astro";
 
 export async function getStaticPaths() {
-  const response = await fetch('https://kythonlk.com/posts.json');
+  const response = await fetch('https://raw.githubusercontent.com/Kythonlk/kythonlk_portfolio/main/public/posts.json');
   const posts = await response.json();
 
     return posts.map(({ link, title, content, img , date }) => {
