@@ -231,38 +231,30 @@ font-size:12px;
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
 }
 
 h2 {
   font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 0.75rem;
-  margin-top: 2rem;
 }
 
 h3 {
   font-size: 1.75rem;
   font-weight: 500;
-  margin-bottom: 0.5rem;
-  margin-top: 1.5rem;
 }
 
 h6 {
   font-size: 1rem;
   font-weight: 700;
-  margin-top: 2rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
 p {
-  margin-bottom: 1.5rem;
   font-size: 1.125rem;
   line-height: 1.8;
 }
 
-/* Code blocks */
 pre {
   background-color: #1a202c;
   color: #f7fafc;
@@ -278,7 +270,6 @@ pre code {
   color: #f7fafc;
 }
 
-/* Inline code */
 code {
   background-color: #edf2f7;
   color: #e53e3e;
@@ -288,7 +279,6 @@ code {
   font-size: 0.875rem;
 }
 
-/* Blockquote */
 blockquote {
   border-left: 4px solid #3182ce;
   padding-left: 1rem;
