@@ -1,0 +1,35 @@
+---
+import Layout from "../layouts/page.astro";
+
+async function getPosts() {
+const response = await fetch('https://raw.githubusercontent.com/Kythonlk/kythonlk_portfolio/main/public/manga_list.json');
+  const posts = await response.json();
+
+  return posts;
+}
+
+const data = await getPosts();
+
+---
+
+<Layout>
+  <div class="max-w-7xl mx-auto p-10">
+    <h1 class="text-4xl font-bold mb-8 text-gray-900">Manga List</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      {data.map(manga => (
+      <div class="bg-white/60 rounded-lg shadow-2xl overflow-hidden">
+          <img 
+            src={manga.imgLink} 
+            alt={manga.title} 
+            class="w-full h-80 object-cover"
+            loading="lazy"
+          />
+          <div class="p-4">
+            <h2 class="text-xl font-semibold mb-2">{manga.title}</h2>
+            <p class="text-gray-700 text-sm">{manga.description.substring(0, 100)}...</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</Layout>
