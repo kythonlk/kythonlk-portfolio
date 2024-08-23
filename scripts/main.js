@@ -1,23 +1,25 @@
 import fs from 'fs';
 
 const wordpressSiteUrl = 'https://blog.lopazint.online';
+const wUrl = 'https://localhost:3000/';
 
 
 async function fetchAndSaveData() {
   try {
-    const postsResponse = await fetch(`${wordpressSiteUrl}/wp-json/wp/v2/posts`);
+    const postsResponse = await fetch(`${wordpressSiteUrl}/wp-json/wp/v2/posts?per_page=50`);
     const postsData = await postsResponse.json();
 
     const allPosts = [];
     let postIdCounter = 1;
 
     for (const postData of postsData) {
+      console.log(postIdCounter);
       const post = {
         id: postIdCounter++,
         title: postData.title.rendered,
         content: postData.content.rendered,
         excerpt: postData.excerpt.rendered,
-        link: postData.link,
+        link: postData.link.replace(wUrl, ''),
         img: null,
         date: postData.date
       };
@@ -34,7 +36,7 @@ async function fetchAndSaveData() {
         const imageFilename = `post-${post.id}-image.${imageExtension}`;
         fs.writeFileSync(`./data/${imageFilename}`, buffer);
 
-        post.img = imageFilename;
+        post.img = `/data/${imageFilename}`;
       }
 
       allPosts.push(post);
