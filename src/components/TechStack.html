@@ -1,58 +1,113 @@
----
-const baseUrl = "https://simpleicons.org/icons";
----
+<section class="py-12 px-2 md:px-20 bg-gray-900/30 text-white">
+  <div class="container mx-auto px-4 text-center mb-8">
+    <h2 class="text-3xl font-bold">Development Tools Hexagon Diagram</h2>
+  </div>
+  <div class="grid grid-cols-5 gap-4">
+    <div class="flex justify-center  py-4">
+      <div class="bg-white/50 shadow-lg rounded-lg p-10 flex items-center justify-center">
+        <div class="text-center">
+          <h3 class="text-xl font-semibold mb-4">Frameworks & CMS</h3>
+          <div class="grid grid-cols-3 gap-2">
+            {frameworks.map((framework) => (
+            <div class="text-center">
+              <img src={`${baseUrl}/${framework.icon}`} alt={framework.name} class="mx-auto w-6 h-6" />
+              <span class="block text-sm mt-2 text-gray-800">{framework.name}</span>
+            </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
 
-<section class="py-12 bg-gray-900/30 text-white">
-  <div class="container mx-auto px-4">
-    <h2 class="text-white text-3xl font-bold text-center mb-8">Development Tools</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-      <div class="p-6 flex flex-col items-center justify-center">
-      <h2 class="text-white text-2xl font-bold mb-4">OS</h2>
-        <img
-          src={baseUrl + "/debian.svg"}
-          alt="Linux"
-          class="w-12 h-12 mb-4"
-        />
-        <h3 class="text-xl font-semibold">Debian</h3>
+    <div class="flex justify-center  py-4">
+      <div class="bg-white/50 shadow-lg rounded-lg p-10 flex items-center justify-center">
+        <div class="text-center">
+          <h3 class="text-xl font-semibold mb-4">Devops Tools</h3>
+          <div class="grid grid-cols-3 gap-2">
+            {devOps.map((devops) => (
+            <div class="text-center">
+              <img src={`${baseUrl}/${devops.icon}`} alt={devops.name} class="mx-auto w-7 h-7" />
+              <span class="block text-sm mt-2 text-gray-800">{devops.name}</span>
+            </div>
+            ))}
+          </div>
+        </div>
       </div>
-            <div class="p-6 flex flex-col items-center justify-center">
-      <h2 class="text-white text-2xl font-bold mb-4">Code Editor</h2>
-        <img
-          src={baseUrl + "/neovim.svg"}
-          alt="Linux"
-          class="w-12 h-12 mb-4"
-        />
-        <h3 class="text-xl font-semibold">NeoVim</h3>
+    </div>
+    <div class="flex justify-center">
+      <div class="bg-white/50 shadow-lg rounded-lg p-10 flex items-center justify-center">
+        <div class="text-center">
+          <h3 class="text-xl font-semibold mb-4">Programming Languages</h3>
+          <div class="grid grid-cols-3 gap-2">
+            {programmingLanguages.map((language) => (
+            <div class="text-center">
+              <img src={`${baseUrl}/${language.icon}`} alt={language.name} class="mx-auto w-6 h-6" />
+              <span class="block text-sm mt-2 text-gray-800">{language.name}</span>
+            </div>
+            ))}
+          </div>
+        </div>
       </div>
-
-      <div class="p-6 flex flex-col items-center justify-center">
-      <h2 class="text-white text-2xl font-bold mb-4">API Testing</h2>
-        <img
-          src={baseUrl + "/httpie.svg"}
-          alt="Linux"
-          class="w-12 h-12 mb-4"
-        />
-        <h3 class=" text-xl font-semibold">Httpie</h3>
+    </div>
+    <div class="bg-white/50 shadow-lg rounded-lg p-6 flex items-center justify-center">
+      <div class="text-center">
+        <h3 class="text-xl font-semibold mb-4">Main Stack</h3>
+        <div class="grid grid-cols-3 gap-2">
+          {mainTool.map((tool) => (
+          <div class="text-center">
+            <div class="mx-auto flex items-center justify-center">
+              <img src={`${baseUrl}/${tool.icon}`} alt={tool.name} class="w-8 h-8" />
+            </div>
+            <span class="block text-sm mt-2 text-gray-800">{tool.name}</span>
+          </div>
+          ))}
+        </div>
       </div>
-      <div class="p-6 flex flex-col items-center justify-center">
-      <h2 class="text-white text-2xl font-bold mb-4">Designing</h2>
-        <img
-          src={baseUrl + "/figma.svg"}
-          alt="Linux"
-          class="w-12 h-12 mb-4"
-        />
-        <h3 class="text-xl font-semibold">Figma</h3>
+    </div>
+    <div class="flex justify-center">
+      <div class="bg-white/50 shadow-lg rounded-lg p-10 flex items-center justify-center">
+        <div class="text-center">
+          <h3 class="text-xl font-semibold mb-4">Databases</h3>
+          <div class="grid grid-cols-3 gap-2">
+            {databases.map((db) => (
+            <div class="text-center">
+              <img src={`${baseUrl}/${db.icon}`} alt={db.name} class="mx-auto w-6 h-6" />
+              <span class="block text-sm mt-2 text-gray-800">{db.name}</span>
+            </div>
+            ))}
+          </div>
+        </div>
       </div>
-      <div class="p-6 flex flex-col items-center justify-center">
-      <h2 class="text-white text-2xl font-bold mb-4">Mangement</h2>
-        <img
-          src={baseUrl + "/libreoffice.svg"}
-          alt="Linux"
-          class="w-12 h-12 mb-4"
-        />
-        <h3 class="text-xl font-semibold">Libre Office</h3>
+    </div>
+    <div class="flex justify-center">
+      <div class="bg-white/50 shadow-lg rounded-lg p-10 flex items-center justify-center">
+        <div class="text-center">
+          <h3 class="text-xl font-semibold mb-4">Tools</h3>
+          <div class="grid grid-cols-3 gap-2">
+            {tools.map((tool) => (
+            <div class="text-center">
+              <img src={`${baseUrl}/${tool.icon}`} alt={tool.name} class="mx-auto w-6 h-6" />
+              <span class="block text-sm mt-2 text-gray-800">{tool.name}</span>
+            </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-center">
+      <div class="bg-white/50 shadow-lg rounded-lg p-10 flex items-center justify-center">
+        <div class="text-center">
+          <h3 class="text-xl font-semibold mb-4">Styling & Markup</h3>
+          <div class="grid grid-cols-3 gap-2">
+            {stylingMarkup.map((style) => (
+            <div class="text-center">
+              <img src={`${baseUrl}/${style.icon}`} alt={style.name} class="mx-auto w-6 h-6" />
+              <span class="block text-sm mt-2 text-gray-800">{style.name}</span>
+            </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
-

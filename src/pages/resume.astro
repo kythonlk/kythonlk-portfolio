@@ -46,14 +46,11 @@ const experiences = [
     <div class="container mx-auto px-4 md:px-6 lg:px-8">
       <h2 class="text-4xl font-bold text-center mb-12 text-indigo-800">Work Experience</h2>
       <div class="relative">
-        {/* Timeline Line */}
         <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-indigo-200 h-full md:block hidden"></div>
         {experiences.map((job, index) => (
           <div key={index} class="relative flex flex-col items-center md:flex-row md:items-start mb-12">
-            {/* Timeline Dot for Mobile */}
             <div class="md:hidden block w-4 h-4 bg-indigo-500 rounded-full mb-6"></div>
             
-            {/* Timeline Card */}
             <div class={`relative md:w-5/12 w-full p-6 bg-white/80 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 ${index % 2 === 0 ? 'md:ml-auto' : 'md:mr-auto'}`}>
               <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
                 <h4 class="text-2xl font-semibold text-indigo-700">{job.title}</h4>
@@ -68,11 +65,13 @@ const experiences = [
               </div>
             </div>
 
-            {/* Timeline Dot for Desktop */}
             <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2 w-6 h-6 bg-indigo-500 rounded-full border-4 border-white"></div>
           </div>
         ))}
       </div>
     </div>
   </section>
+  <a href="./my.pdf" download class="flex justify-center mx-auto text-center w-40 text-base text-blue-900 hover:bg-blue-100 bg-white/50 py-1 px-4 rounded my-4">
+      Download CV
+    </a>
 </Layout>

@@ -4,7 +4,7 @@ import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
-<header class="bg-white/20 backdrop-blur-lg shadow-md sticky top-0 z-50">
+<header class="bg-white/20 backdrop-blur-lg shadow-md mx-4 md:mx-20 my-2 px-4 md:my-4 rounded-xl md:rounded-full sticky top-2 z-50">
     <nav class="flex items-center justify-between flex-wrap p-2 md:px-20 px-2">
         <h2 class="text-black">
             <a href="/" class="font-semibold text-2xl text-black hover:text-gray-700">{SITE_TITLE}</a>
@@ -18,14 +18,11 @@ import { SITE_TITLE } from '../consts';
             <div class="text-xl lg:flex-grow lg:mx-auto text-left md:text-center flex flex-col md:block">
                 <HeaderLink href="/resume" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-4">Work Experience</HeaderLink>
                 <HeaderLink href="/projects" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-4">Projects</HeaderLink>
-                <HeaderLink href="/contact" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-4">Contact</HeaderLink>
-                <HeaderLink href="/blogs" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-4">Blogs</HeaderLink>
-                <HeaderLink href="/mangas" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-4">Mangas</HeaderLink>
+                <HeaderLink href="/blog" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-4">Blog</HeaderLink>
                 <HeaderLink href="/terminal" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black">Terminal</HeaderLink>
             </div>
             <div>
-                <a href="https://twitter.com/kythonlk" target="_blank" class="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-black mt-4 lg:mt-0">Follow on Twitter</a>
-                <a href="https://github.com/Kythonlk/kythonlk_portfolio" target="_blank" class="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-black mt-4 lg:mt-0">GitHub Repo</a>
+                <a href="https://github.com/Kythonlk/kythonlk_portfolio" target="_blank" class="inline-block text-lg px-4 py-2 leading-none border rounded text-black border-black mt-4 lg:mt-0">GitHub Repo</a>
             </div>
         </div>
     </nav>

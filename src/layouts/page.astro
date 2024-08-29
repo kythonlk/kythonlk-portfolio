@@ -3,6 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { ViewTransitions } from 'astro:transitions';
 ---
 
 <!doctype html>
@@ -10,18 +11,39 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     <style>
+        body {
+            background-image: url('https://kythonlk.com/bg.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
 
-body {
-    background-image: url('https://kythonlk.com/bg.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
+        .puppy-animation {
+            position: fixed;
+            bottom: -50px;
+            right: -150px; 
+            width: 150px; 
+            z-index: 1000;
+            animation: run 10s linear infinite;
+        }
+
+        @keyframes run {
+            0% {
+              left: -150px;           
+            }
+            100% {
+                left: 100%; 
+            }
+        }
     </style>
+      <ViewTransitions />
 	</head>
 	<body class="text-gray-800">
 		<Header />
     <slot />
 		<Footer />
+    
+    <img src="https://i.giphy.com/326iF1qWfsTgKA4c78.webp" alt="Running Puppy" class="puppy-animation" />
 	</body>
 </html>
+

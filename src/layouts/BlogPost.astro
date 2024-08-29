@@ -21,7 +21,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
           background-attachment: fixed;
       }
 			main {
-				width: calc(100% - 2em);
 				max-width: 100%;
 				margin: 0;
 			}
@@ -43,14 +42,14 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 	<body>
 		<Header />
 		<main class="text-gray-800">
-			<article class="py-4  text-gray-900 rounded-xl">
+			<article class="py-4 text-gray-900 rounded-xl">
 				<div class="hero-image">
 					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
 				</div>
-        <div class="max-w-6xl mx-auto m-10 p-10 bg-gray-900/20 rounded-xl gap-4">
+        <div class="md:max-w-6xl md:mx-auto m-0 md:m-10 p-4 md:p-10 bg-gray-900/20 rounded-xl gap-4">
           <div class="title">
-            <p class="text-xl text-gray-100 mb-12 text-center"><FormattedDate date={pubDate} /></p>
-            <h1 class="text-6xl font-bold mb-4 text-gray-900 text-center mb-8">{title}</h1>
+            <p class="text-xl text-gray-100 mb-8 md:mb-12 text-center"><FormattedDate date={pubDate} /></p>
+            <h1 class="md:text-6xl text-2xl font-bold text-gray-900 text-center mb-8">{title}</h1>
 						<hr class="mb-4"/>
 					</div>
 					<slot />
@@ -61,33 +60,3 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 	</body>
 </html>
 
-
-
-
-<!------->
-<!--import BaseHead from '../components/BaseHead.astro';-->
-<!--import Header from '../components/Header.astro';-->
-<!--import Footer from '../components/Footer.astro';-->
-<!--import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';-->
-<!------->
-<!---->
-<!--<!doctype html>-->
-<!--<html lang="en">-->
-<!--	<head>-->
-<!--		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />-->
-<!--    <style>-->
-<!---->
-<!--body {-->
-<!--    background-image: url('https://kythonlk.com/bg.svg');-->
-<!--    background-size: cover;-->
-<!--    background-repeat: no-repeat;-->
-<!--    background-attachment: fixed;-->
-<!--}-->
-<!--    </style>-->
-<!--	</head>-->
-<!--	<body class="text-gray-800">-->
-<!--		<Header />-->
-<!--    <slot />-->
-<!--		<Footer />-->
-<!--	</body>-->
-<!--</html>-->

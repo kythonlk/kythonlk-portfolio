@@ -3,7 +3,6 @@ const baseUrl = "https://simpleicons.org/icons";
 
 const tools = [
   { name: 'Arch Linux', icon: 'archlinux.svg', category: 'OS' },
-  { name: 'NeoVim', icon: 'neovim.svg', category: 'Code Editor' },
   { name: 'Httpie', icon: 'httpie.svg', category: 'API Testing' },
   { name: 'Figma', icon: 'figma.svg', category: 'Designing' },
   { name: 'LibreOffice', icon: 'libreoffice.svg', category: 'Management' },
@@ -11,8 +10,6 @@ const tools = [
 
 const programmingLanguages = [
   { name: 'JavaScript', icon: 'javascript.svg' },
-  { name: 'Go', icon: 'go.svg' },
-  { name: 'TypeScript', icon: 'typescript.svg' },
   { name: 'PHP', icon: 'php.svg' },
   { name: 'Bash', icon: 'gnubash.svg' },
   { name: 'C', icon: 'c.svg' },
@@ -24,34 +21,27 @@ const mainTool = [
   { name: 'Postgres', icon: 'postgresql.svg' },
   { name: 'React', icon: 'react.svg' },
   { name: 'Git', icon: 'git.svg' },
-  { name: 'tailwindcss', icon: 'tailwindcss.svg' },
+  { name: 'Tailwindcss', icon: 'tailwindcss.svg' },
   { name: 'NeoVim', icon: 'neovim.svg' },
   { name: 'Express.js', icon: 'express.svg' },
+  { name: 'GitHub', icon: 'github.svg' },
 ];
 
 const databases = [
   { name: 'Mysql', icon: 'mysql.svg' },
-  { name: 'Postgres', icon: 'postgresql.svg' },
   { name: 'Firebase', icon: 'firebase.svg' },
   { name: 'SQLite', icon: 'sqlite.svg' },
   { name: 'Mongodb', icon: 'mongodb.svg' },
-  { name: 'Ms Sql', icon: 'mongodb.svg' },
 ];
 
 const frameworks = [
-  { name: 'Htmx', icon: 'htmx.svg' },
   { name: 'Wordpress', icon: 'wordpress.svg' },
-  { name: 'Express.js', icon: 'express.svg' },
   { name: 'Next.js', icon: 'nextdotjs.svg' },
   { name: 'React Native', icon: 'react.svg' },
   { name: 'Laravel', icon: 'laravel.svg' },
-  { name: 'Astro', icon: 'astro.svg' },
 ];
 
 const stylingMarkup = [
-  { name: 'html', icon: 'html5.svg' },
-  { name: 'css', icon: 'css3.svg' },
-  { name: 'tailwindcss', icon: 'tailwindcss.svg' },
   { name: 'less', icon: 'less.svg' },
   { name: 'Bootstrap', icon: 'bootstrap.svg' },
   { name: 'Shadcn', icon: 'shadcnui.svg' },
@@ -59,8 +49,6 @@ const stylingMarkup = [
 ];
 
 const devOps = [
-  { name: 'GitHub', icon: 'github.svg' },
-  { name: 'Git', icon: 'git.svg' },
   { name: 'Docker', icon: 'docker.svg' },
   { name: 'Nginx', icon: 'nginx.svg' },
   { name: 'Aws', icon: 'amazon.svg' },
@@ -71,143 +59,124 @@ const devOps = [
 
 <section class="py-12 px-2 md:px-20 bg-gray-900/30 text-white">
   <div class="container mx-auto px-4 text-center mb-8">
-    <h2 class="text-3xl font-bold">Development Tools Venn Diagram</h2>
+    <h2 class="text-3xl font-bold">Development Tools Hexagon Diagram</h2>
   </div>
-  <div class="relative mx-auto flex justify-center items-center" style="height: 700px;">
-    <!-- Main Stack -->
-    <div class="absolute z-20 bg-white/50 shadow-lg rounded-full p-8 flex items-center justify-center">
-      <div class="text-center">
-        <h3 class="text-xl font-semibold mb-4">Main Stack</h3>
-        <div class="grid grid-cols-3 md:grid-cols-4 gap-2">
-          {mainTool.map((language) => (
-            <div class="text-center p-4">
-              <div class="mx-auto flex items-center justify-center">
-                <img 
-                  src={`${baseUrl}/${language.icon}`} 
-                  alt={language.name} 
-                  class="w-8 h-8"
-                />
-              </div>
-              <span class="block text-sm mt-2 text-gray-800">{language.name}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-
-    <!-- Frameworks and CMS -->
-    <div class="absolute bg-white/50 shadow-lg rounded-full p-8 flex items-center justify-center" style="top: 0px; left: 150px;">
-      <div class="text-center">
-        <h3 class="text-xl font-semibold mb-4">Frameworks and CMS</h3>
-        <div class="grid grid-cols-3 md:grid-cols-3 gap-2">
-          {frameworks.map((framework) => (
+  <div class="flex flex-col lg:flex-row gap-4 mb-4 justify-between items-center">
+    <div class="flex justify-center py-4 w-full lg:w-1/3">
+      <div class="bg-white/50 shadow-lg rounded-lg p-6 lg:p-10 flex items-center justify-center w-full">
+        <div class="text-center">
+          <h3 class="text-xl font-semibold mb-4">Frameworks & CMS</h3>
+          <div class="grid grid-cols-4 gap-2">
+            {frameworks.map((framework) => (
             <div class="text-center">
-              <img 
-                src={`${baseUrl}/${framework.icon}`} 
-                alt={framework.name} 
-                class="mx-auto w-6 h-6"
-              />
+              <img src={`${baseUrl}/${framework.icon}`} alt={framework.name} class="mx-auto w-6 h-6" />
               <span class="block text-sm mt-2 text-gray-800">{framework.name}</span>
             </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Databases -->
-    <div class="absolute bg-white/50 shadow-lg rounded-full p-8 flex items-center justify-center" style="top: 0px; right: 250px;">
-      <div class="text-center">
-        <h3 class="text-xl font-semibold mb-4">Databases</h3>
-        <div class="grid grid-cols-3 md:grid-cols-3 gap-2">
-          {databases.map((db) => (
+    <div class="flex justify-center py-4 w-full lg:w-1/3">
+      <div class="bg-white/50 shadow-lg rounded-lg p-6 lg:p-10 flex items-center justify-center w-full">
+        <div class="text-center">
+          <h3 class="text-xl font-semibold mb-4">Main Stack</h3>
+          <div class="grid grid-cols-3 gap-4">
+            {mainTool.map((tool) => (
             <div class="text-center">
-              <img 
-                src={`${baseUrl}/${db.icon}`} 
-                alt={db.name} 
-                class="mx-auto w-6 h-6"
-              />
-              <span class="block text-sm mt-2 text-gray-800">{db.name}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-
-    <!-- DevOps -->
-    <div class="absolute bg-white/50 shadow-lg rounded-full p-8 flex items-center justify-center" style="bottom: -40px; left: 300px;">
-      <div class="text-center">
-        <h3 class="text-xl font-semibold mb-4">DevOps</h3>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
-          {devOps.map((devops) => (
-            <div class="text-center">
-              <img 
-                src={`${baseUrl}/${devops.icon}`} 
-                alt={devops.name} 
-                class="mx-auto w-7 h-7 m-2"
-              />
-              <span class="block text-sm mt-2 text-gray-800">{devops.name}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-
-    <!-- Tools -->
-    <div class="absolute bg-white/50 shadow-lg rounded-full p-8 flex items-center justify-center" style="bottom: 0px; right: 250px;">
-      <div class="text-center">
-        <h3 class="text-xl font-semibold mb-4">Tools</h3>
-        <div class="grid grid-cols-3 sm:grid-cols-3 gap-2">
-          {tools.map((tool) => (
-            <div class="text-center">
-              <img 
-                src={`${baseUrl}/${tool.icon}`} 
-                alt={tool.name} 
-                class="mx-auto w-6 h-6"
-              />
+              <div class="mx-auto flex items-center justify-center">
+                <img src={`${baseUrl}/${tool.icon}`} alt={tool.name} class="w-8 h-8" />
+              </div>
               <span class="block text-sm mt-2 text-gray-800">{tool.name}</span>
             </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Programming Languages -->
-    <div class="absolute bg-white/50 shadow-lg rounded-full p-8 flex items-center justify-center" style="top: 300px; left: -50px;">
-      <div class="text-center">
-        <h3 class="text-xl font-semibold mb-4">Programming Languages</h3>
-        <div class="grid grid-cols-3 md:grid-cols-3 gap-2">
-          {programmingLanguages.map((language) => (
+    <div class="flex justify-center py-4 w-full lg:w-1/3">
+      <div class="bg-white/50 shadow-lg rounded-lg p-6 lg:p-10 flex items-center justify-center w-full">
+        <div class="text-center">
+          <h3 class="text-xl font-semibold mb-4">Programming Languages</h3>
+          <div class="grid grid-cols-4 gap-2">
+            {programmingLanguages.map((language) => (
             <div class="text-center">
-              <img 
-                src={`${baseUrl}/${language.icon}`} 
-                alt={language.name} 
-                class="mx-auto w-6 h-6"
-              />
+              <img src={`${baseUrl}/${language.icon}`} alt={language.name} class="mx-auto w-6 h-6" />
               <span class="block text-sm mt-2 text-gray-800">{language.name}</span>
             </div>
-          ))}
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Second row -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div class="flex justify-center py-4">
+      <div class="bg-white/50 shadow-lg rounded-lg p-6 lg:p-8 flex items-center justify-center w-full">
+        <div class="text-center">
+          <h3 class="text-xl font-semibold mb-4">DevOps Tools</h3>
+          <div class="grid grid-cols-3 gap-2">
+            {devOps.map((devops) => (
+            <div class="text-center">
+              <img src={`${baseUrl}/${devops.icon}`} alt={devops.name} class="mx-auto w-6 h-6" />
+              <span class="block text-sm mt-2 text-gray-800">{devops.name}</span>
+            </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Styling and Markup -->
-    <div class="absolute bg-white/50 shadow-lg rounded-full p-8 flex items-center justify-center" style="bottom: 150px; right: -50px;">
-      <div class="text-center">
-        <h3 class="text-xl font-semibold mb-4">Styling and Markup</h3>
-        <div class="grid grid-cols-3 md:grid-cols-3 gap-2 p-2">
-          {stylingMarkup.map((style) => (
+    <div class="flex justify-center py-4">
+      <div class="bg-white/50 shadow-lg rounded-lg p-6 lg:p-8 flex items-center justify-center w-full">
+        <div class="text-center">
+          <h3 class="text-xl font-semibold mb-4">Databases</h3>
+          <div class="grid grid-cols-4 gap-2">
+            {databases.map((db) => (
             <div class="text-center">
-              <img 
-                src={`${baseUrl}/${style.icon}`} 
-                alt={style.name} 
-                class="mx-auto w-6 h-6"
-              />
+              <img src={`${baseUrl}/${db.icon}`} alt={db.name} class="mx-auto w-6 h-6" />
+              <span class="block text-sm mt-2 text-gray-800">{db.name}</span>
+            </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-center py-4">
+      <div class="bg-white/50 shadow-lg rounded-lg p-6 lg:p-8 flex items-center justify-center w-full">
+        <div class="text-center">
+          <h3 class="text-xl font-semibold mb-4">Tools</h3>
+          <div class="grid grid-cols-4 gap-2">
+            {tools.map((tool) => (
+            <div class="text-center">
+              <img src={`${baseUrl}/${tool.icon}`} alt={tool.name} class="mx-auto w-6 h-6" />
+              <span class="block text-sm mt-2 text-gray-800">{tool.name}</span>
+            </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-center py-4">
+      <div class="bg-white/50 shadow-lg rounded-lg p-6 lg:p-8 flex items-center justify-center w-full">
+        <div class="text-center">
+          <h3 class="text-xl font-semibold mb-4">Styling & Markup</h3>
+          <div class="grid grid-cols-4 gap-2">
+            {stylingMarkup.map((style) => (
+            <div class="text-center">
+              <img src={`${baseUrl}/${style.icon}`} alt={style.name} class="mx-auto w-6 h-6" />
               <span class="block text-sm mt-2 text-gray-800">{style.name}</span>
             </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>
-
   </div>
 </section>

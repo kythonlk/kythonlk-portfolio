@@ -1,11 +1,11 @@
 ---
 import Layout from '../layouts/page.astro';
 import Dhbaione from '../images/dhabione.png'
-import Gh from '../images/git.svg'
+import gh from '../images/git.svg'
 
 const projects = {
   client: [
-  { name: "Tinylux Ecommerce", description: "E-commerce site build with Go lang backend and react(nextjs) front end with stripe checkout", link: "https://tinylux.vercel.app/", tags: ["Go", "E-commerce","React","Next.js","Mongodb","Stripe"] },
+  { name: "Tinylux Ecommerce", description: "E-commerce site build with Go lang backend and react(nextjs) front end with stripe checkout", link: "https://shop.tinylux.ae", tags: ["Go", "E-commerce","React","Next.js","Mongodb","Stripe"] },
   { name: "Babylux invoice", description: "A invoice generator for babylux using React", link: "https://babylux-invoice.vercel.app", tags: ["React", "Finance","Invoice","Pdf"] },
     { name: "Business Portfolio Template", description: "Astro simple business portfolio website", link: "https://dev.kythonlk.com", tags: ["Astro", "Portfolio"] },
     { name: "Dhabione", description: "E-commerce website build with wordpress for 10k daily users", link: "https://dhabione.com", tags: ["WordPress", "WooCommerce","Bootstrap"],image: Dhbaione},
@@ -27,7 +27,6 @@ const projects = {
 <Layout>
   <section class="py-12 bg-gray-900/20 text-gray-900">
     <div class="container mx-auto px-4 md:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-center mb-12 text-black">My Projects</h2>
       
       {Object.entries(projects).map(([category, projectList]) => (
         <div key={category} class="mb-12">
@@ -51,7 +50,7 @@ const projects = {
                   <div class="flex justify-between items-center">
                     <a href={project.link} target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:underline">View Project</a>
                     <a href={`https://github.com/Kythonlk`} target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-gray-900">
-                      <img src={Gh.src} alt={project.name} class="text-blue-700 bg-gray-900" />
+                      <img src={gh.src} alt={project.name} class="text-blue-700 w-10" />
                     </a>
                   </div>
                 </div>
