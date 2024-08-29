@@ -2,7 +2,7 @@
 const baseUrl = "https://simpleicons.org/icons";
 
 const tools = [
-  { name: 'Debian', icon: 'debian.svg', category: 'OS' },
+  { name: 'Arch Linux', icon: 'archlinux.svg', category: 'OS' },
   { name: 'NeoVim', icon: 'neovim.svg', category: 'Code Editor' },
   { name: 'Httpie', icon: 'httpie.svg', category: 'API Testing' },
   { name: 'Figma', icon: 'figma.svg', category: 'Designing' },
@@ -18,11 +18,24 @@ const programmingLanguages = [
   { name: 'C', icon: 'c.svg' },
 ];
 
+const mainTool = [
+  { name: 'Go', icon: 'go.svg' },
+  { name: 'TypeScript', icon: 'typescript.svg' },
+  { name: 'Postgres', icon: 'postgresql.svg' },
+  { name: 'React', icon: 'react.svg' },
+  { name: 'Git', icon: 'git.svg' },
+  { name: 'tailwindcss', icon: 'tailwindcss.svg' },
+  { name: 'NeoVim', icon: 'neovim.svg' },
+  { name: 'Express.js', icon: 'express.svg' },
+];
+
 const databases = [
   { name: 'Mysql', icon: 'mysql.svg' },
   { name: 'Postgres', icon: 'postgresql.svg' },
   { name: 'Firebase', icon: 'firebase.svg' },
   { name: 'SQLite', icon: 'sqlite.svg' },
+  { name: 'Mongodb', icon: 'mongodb.svg' },
+  { name: 'Ms Sql', icon: 'mongodb.svg' },
 ];
 
 const frameworks = [
@@ -36,117 +49,165 @@ const frameworks = [
 ];
 
 const stylingMarkup = [
-  { name: 'html', icon: 'html.svg' },
-  { name: 'css', icon: 'css.svg' },
+  { name: 'html', icon: 'html5.svg' },
+  { name: 'css', icon: 'css3.svg' },
   { name: 'tailwindcss', icon: 'tailwindcss.svg' },
   { name: 'less', icon: 'less.svg' },
   { name: 'Bootstrap', icon: 'bootstrap.svg' },
-  { name: 'Shadcn', icon: 'shadcn.svg' },
+  { name: 'Shadcn', icon: 'shadcnui.svg' },
   { name: 'Mdx', icon: 'mdx.svg' },
 ];
 
 const devOps = [
+  { name: 'GitHub', icon: 'github.svg' },
   { name: 'Git', icon: 'git.svg' },
   { name: 'Docker', icon: 'docker.svg' },
-  { name: 'GitHub', icon: 'github.svg' },
   { name: 'Nginx', icon: 'nginx.svg' },
   { name: 'Aws', icon: 'amazon.svg' },
 ];
+
+
 ---
 
 <section class="py-12 px-2 md:px-20 bg-gray-900/30 text-white">
-  <div class="container mx-auto px-4">
-    <h2 class="text-white text-3xl font-bold text-center mb-8">Development Tools</h2>
+  <div class="container mx-auto px-4 text-center mb-8">
+    <h2 class="text-3xl font-bold">Development Tools Venn Diagram</h2>
   </div>
-  <div class="flex-row md:flex">
-<div class="container px-4 mt-4">
-  <div class="w-full ">
-    <div class="bg-white/50 shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300 ease-in-out">
-      <h3 class="text-xl font-semibold mb-4 text-center">Programming Languages</h3>
-      <div class="grid grid-cols-3 md:grid-cols-4 gap-2">
-        {programmingLanguages.map((language) => (
-          <div key={language.name} class="text-center">
-            <img 
-              src={`${baseUrl}/${language.icon}`} 
-              alt={language.name} 
-              class="mx-auto w-6 h-6"
-            />
-            <span class="block text-sm mt-2 text-gray-800">{language.name}</span>
-          </div>
-        ))}
+  <div class="relative mx-auto flex justify-center items-center" style="height: 700px;">
+    <!-- Main Stack -->
+    <div class="absolute z-20 bg-white/50 shadow-lg rounded-full p-8 flex items-center justify-center">
+      <div class="text-center">
+        <h3 class="text-xl font-semibold mb-4">Main Stack</h3>
+        <div class="grid grid-cols-3 md:grid-cols-4 gap-2">
+          {mainTool.map((language) => (
+            <div class="text-center p-4">
+              <div class="mx-auto flex items-center justify-center">
+                <img 
+                  src={`${baseUrl}/${language.icon}`} 
+                  alt={language.name} 
+                  class="w-8 h-8"
+                />
+              </div>
+              <span class="block text-sm mt-2 text-gray-800">{language.name}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
-  </div>
-</div>
-<div class="container mx-auto px-4 mt-4">
-  <div class="w-full">
-    <div class="bg-white/50 shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300 ease-in-out">
-      <h3 class="text-xl font-semibold mb-4 text-center">Frameworks and CMS</h3>
-      <div class="grid grid-cols-3 md:grid-cols-4 gap-2">
-        {frameworks.map((language) => (
-          <div key={language.name} class="text-center">
-            <img 
-              src={`${baseUrl}/${language.icon}`} 
-              alt={language.name} 
-              class="mx-auto w-6 h-6"
-            />
-            <span class="block text-sm mt-2 text-gray-800">{language.name}</span>
-          </div>
-        ))}
+
+    <!-- Frameworks and CMS -->
+    <div class="absolute bg-white/50 shadow-lg rounded-full p-8 flex items-center justify-center" style="top: 0px; left: 150px;">
+      <div class="text-center">
+        <h3 class="text-xl font-semibold mb-4">Frameworks and CMS</h3>
+        <div class="grid grid-cols-3 md:grid-cols-3 gap-2">
+          {frameworks.map((framework) => (
+            <div class="text-center">
+              <img 
+                src={`${baseUrl}/${framework.icon}`} 
+                alt={framework.name} 
+                class="mx-auto w-6 h-6"
+              />
+              <span class="block text-sm mt-2 text-gray-800">{framework.name}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
-  </div>
-</div>
-<div class="container mx-auto px-4 mt-4">
-  <div class="w-full">
-    <div class="bg-white/50 shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300 ease-in-out">
-      <h3 class="text-xl font-semibold mb-4 text-center">Databases and Data Providers</h3>
-      <div class="grid grid-cols-3 md:grid-cols-4 gap-2">
-        {databases.map((language) => (
-          <div key={language.name} class="text-center">
-            <img 
-              src={`${baseUrl}/${language.icon}`} 
-              alt={language.name} 
-              class="mx-auto w-6 h-6"
-            />
-            <span class="block text-sm mt-2 text-gray-800">{language.name}</span>
-          </div>
-        ))}
+
+    <!-- Databases -->
+    <div class="absolute bg-white/50 shadow-lg rounded-full p-8 flex items-center justify-center" style="top: 0px; right: 250px;">
+      <div class="text-center">
+        <h3 class="text-xl font-semibold mb-4">Databases</h3>
+        <div class="grid grid-cols-3 md:grid-cols-3 gap-2">
+          {databases.map((db) => (
+            <div class="text-center">
+              <img 
+                src={`${baseUrl}/${db.icon}`} 
+                alt={db.name} 
+                class="mx-auto w-6 h-6"
+              />
+              <span class="block text-sm mt-2 text-gray-800">{db.name}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
-  </div>
-</div>
-</div>
-<div class="container mx-auto px-4 mt-4">
-  <div class="w-full">
-    <div class="bg-white/50 shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300 ease-in-out">
-      <h3 class="text-xl font-semibold mb-4 text-center">Dev Ops and Virsion control</h3>
-      <div class="grid grid-cols-3 md:grid-cols-5 gap-2">
-        {devOps.map((language) => (
-          <div key={language.name} class="text-center">
-            <img 
-              src={`${baseUrl}/${language.icon}`} 
-              alt={language.name} 
-              class="mx-auto w-6 h-6"
-            />
-            <span class="block text-sm mt-2 text-gray-800">{language.name}</span>
-          </div>
-        ))}
+
+    <!-- DevOps -->
+    <div class="absolute bg-white/50 shadow-lg rounded-full p-8 flex items-center justify-center" style="bottom: -40px; left: 300px;">
+      <div class="text-center">
+        <h3 class="text-xl font-semibold mb-4">DevOps</h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+          {devOps.map((devops) => (
+            <div class="text-center">
+              <img 
+                src={`${baseUrl}/${devops.icon}`} 
+                alt={devops.name} 
+                class="mx-auto w-7 h-7 m-2"
+              />
+              <span class="block text-sm mt-2 text-gray-800">{devops.name}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
-  </div>
-  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-    {tools.map((tool) => (
-      <div key={tool.name} class="p-6 flex flex-col items-center justify-center">
-        <h2 class="text-white text-xl font-bold mb-4">{tool.category}</h2>
-        <img
-          src={`${baseUrl}/${tool.icon}`}
-          alt={tool.name}
-          class="w-12 h-12 mb-4"
-        />
-        <h3 class="text-base font-semibold">{tool.name}</h3>
+
+    <!-- Tools -->
+    <div class="absolute bg-white/50 shadow-lg rounded-full p-8 flex items-center justify-center" style="bottom: 0px; right: 250px;">
+      <div class="text-center">
+        <h3 class="text-xl font-semibold mb-4">Tools</h3>
+        <div class="grid grid-cols-3 sm:grid-cols-3 gap-2">
+          {tools.map((tool) => (
+            <div class="text-center">
+              <img 
+                src={`${baseUrl}/${tool.icon}`} 
+                alt={tool.name} 
+                class="mx-auto w-6 h-6"
+              />
+              <span class="block text-sm mt-2 text-gray-800">{tool.name}</span>
+            </div>
+          ))}
+        </div>
       </div>
-    ))}
+    </div>
+
+    <!-- Programming Languages -->
+    <div class="absolute bg-white/50 shadow-lg rounded-full p-8 flex items-center justify-center" style="top: 300px; left: -50px;">
+      <div class="text-center">
+        <h3 class="text-xl font-semibold mb-4">Programming Languages</h3>
+        <div class="grid grid-cols-3 md:grid-cols-3 gap-2">
+          {programmingLanguages.map((language) => (
+            <div class="text-center">
+              <img 
+                src={`${baseUrl}/${language.icon}`} 
+                alt={language.name} 
+                class="mx-auto w-6 h-6"
+              />
+              <span class="block text-sm mt-2 text-gray-800">{language.name}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Styling and Markup -->
+    <div class="absolute bg-white/50 shadow-lg rounded-full p-8 flex items-center justify-center" style="bottom: 150px; right: -50px;">
+      <div class="text-center">
+        <h3 class="text-xl font-semibold mb-4">Styling and Markup</h3>
+        <div class="grid grid-cols-3 md:grid-cols-3 gap-2 p-2">
+          {stylingMarkup.map((style) => (
+            <div class="text-center">
+              <img 
+                src={`${baseUrl}/${style.icon}`} 
+                alt={style.name} 
+                class="mx-auto w-6 h-6"
+              />
+              <span class="block text-sm mt-2 text-gray-800">{style.name}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
   </div>
-</div>
 </section>
