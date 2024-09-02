@@ -2,7 +2,7 @@
 title: 'Creating a Beautiful CRUD Dashboard using ShadCN UI, Tailwind, Next.js, and Go Backend with MongoDB'
 description: '<p>Setting Up the Project Environment Creating a beautiful CRUD dashboard involves several preliminary steps to ensure a seamless development experience. The first step entails setting up the project environment. Begin by initializing a new Next.js project. This can be achieved by running npx create-next-app in your terminal. Choose a suitable name for your project and [&hellip;]</p>
 '
-pubDate: 'Friday, August 23, 2024'
+pubDate: 'August 12, 2024'
 heroImage: '/data/post-1-image.png'
 ---
 

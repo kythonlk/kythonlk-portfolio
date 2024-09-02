@@ -2,7 +2,7 @@
 title: 'Maximizing Productivity with LazyVim and Windows Terminal'
 description: '<p>Introduction Are you tired of switching between different applications and terminals on your Windows machine? Do you wish you could have the efficiency and productivity of working on a Linux system? Look no further! In this blog post, we will guide you through setting up LazyVim on your Windows machine and using Windows Terminal with [&hellip;]</p>
 '
-pubDate: 'Tuesday, August 29, 2023'
+pubDate: 'May 29, 2024'
 heroImage: '/data/post-9-image.jpg'
 ---
 ## Introduction

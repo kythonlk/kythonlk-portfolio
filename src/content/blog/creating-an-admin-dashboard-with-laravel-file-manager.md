@@ -2,7 +2,7 @@
 title: 'Creating an Admin Dashboard with Laravel File Manager'
 description: '<p>Laravel is a popular PHP framework known for its simplicity and elegance. One of its powerful features is the ability to create an admin dashboard quickly and efficiently. In this blog post, we will explore how to build an admin dashboard using Laravel File Manager. To get started, we need to install Laravel and set [&hellip;]</p>
 '
-pubDate: 'Friday, December 22, 2023'
+pubDate: 'December 22, 2023'
 heroImage: '/data/post-7-image.jpg'
 ---
 

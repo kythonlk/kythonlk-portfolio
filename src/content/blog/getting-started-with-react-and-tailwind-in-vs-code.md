@@ -2,7 +2,7 @@
 title: 'Getting Started with React and Tailwind in VS Code'
 description: '<p>Introduction Welcome to our blog post on how to start a React project and set it up with Tailwind in VS Code! React is a popular JavaScript library for building user interfaces, and Tailwind is a utility-first CSS framework that helps you quickly create custom designs. By combining these two powerful tools, you can create [&hellip;]</p>
 '
-pubDate: 'Tuesday, August 22, 2023'
+pubDate: 'May 22, 2024'
 heroImage: '/data/post-19-image.jpg'
 ---
 

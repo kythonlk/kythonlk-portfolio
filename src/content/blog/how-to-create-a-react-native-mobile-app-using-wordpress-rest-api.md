@@ -2,7 +2,7 @@
 title: 'How to Create a React Native Mobile App Using WordPress REST API'
 description: '<p>React Native has become a popular choice for building mobile applications due to its ability to create cross-platform apps with a single codebase. If you&#8217;re looking to create a mobile app using React Native and integrate it with WordPress, the WordPress REST API provides a powerful solution. In this guide, we will walk you through [&hellip;]</p>
 '
-pubDate: 'Friday, December 22, 2023'
+pubDate: 'December 22, 2023'
 heroImage: '/data/post-8-image.jpg'
 ---
 ## Introduction

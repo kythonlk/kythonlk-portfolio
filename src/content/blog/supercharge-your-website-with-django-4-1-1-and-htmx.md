@@ -2,7 +2,7 @@
 title: 'Supercharge Your Website with Django 4.1.1 and htmx'
 description: '<p>Boost Your Website&#8217;s Performance with Django 4.1.1 and htmx Are you looking to take your website to the next level? Look no further! In this blog post, we&#8217;ll show you how to set up Django 4.1.1 and harness the power of htmx to supercharge your website&#8217;s performance. Section 1: Setting up Django 4.1.1 Django is [&hellip;]</p>
 '
-pubDate: 'Tuesday, August 29, 2023'
+pubDate: 'September 29, 2023'
 heroImage: '/data/post-10-image.jpg'
 ---
 ## Boost Your Website's Performance with Django 4.1.1 and htmx

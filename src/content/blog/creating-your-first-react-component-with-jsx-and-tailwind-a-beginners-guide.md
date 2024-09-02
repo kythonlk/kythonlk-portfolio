@@ -2,7 +2,7 @@
 title: 'Creating Your First React Component with JSX and Tailwind: A Beginners Guide'
 description: '<p>Introduction Are you ready to dive into the exciting world of React? In this blog post, we&#8217;ll walk you through the process of creating your first React component using JSX and Tailwind. Whether you&#8217;re a seasoned developer looking to learn a new framework or a beginner just starting out, this guide will provide you with [&hellip;]</p>
 '
-pubDate: 'Tuesday, August 22, 2023'
+pubDate: 'May 16, 2024'
 heroImage: '/data/post-18-image.jpg'
 ---
 

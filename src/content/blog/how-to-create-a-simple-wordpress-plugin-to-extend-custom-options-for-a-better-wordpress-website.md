@@ -2,7 +2,7 @@
 title: 'How to Create a Simple WordPress Plugin to Extend Custom Options for a Better WordPress Website'
 description: '<p>Introduction to WordPress Plugin Development WordPress plugin development serves as an indispensable skill for anyone looking to amplify the functionality and user experience of their website. A plugin in WordPress is a piece of software that can be added to a WordPress site to enhance its capabilities. Whether you wish to include additional features, optimize [&hellip;]</p>
 '
-pubDate: 'Friday, August 23, 2024'
+pubDate: 'November 01, 2023'
 heroImage: '/data/post-5-image.jpg'
 ---
 

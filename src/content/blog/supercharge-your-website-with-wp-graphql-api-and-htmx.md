@@ -2,7 +2,7 @@
 title: 'Supercharge Your Website with wp-graphql API and htmx'
 description: '<p>Creating an Interactive Form with htmx and WPGraphQL API As developers, we often strive to create web experiences that are both dynamic and user-friendly. One way to achieve this is by leveraging the power of modern JavaScript libraries and APIs. In this blog post, we&#8217;ll explore how to build an interactive form using the htmx [&hellip;]</p>
 '
-pubDate: 'Monday, August 28, 2023'
+pubDate: 'October 20, 2023'
 heroImage: '/data/post-11-image.jpg'
 ---
 

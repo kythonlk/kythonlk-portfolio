@@ -2,7 +2,7 @@
 title: 'Building a Real-Time Application with Go, Vite React, and WebSockets'
 description: '<p>Setting Up Your Development Environment Embarking on the journey to build a real-time application with Go, Vite React, and WebSockets necessitates a proper development environment setup. Initially, installing Go is imperative. Head to the official Go website, download the installer for your operating system, and follow the installation instructions. Once installed, you can verify the […]</p>
 '
-pubDate: 'Friday, August 23, 2024'
+pubDate: 'Friday, July 29, 2024'
 heroImage: '/data/post-2-image.jpg'
 ---
 

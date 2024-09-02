@@ -2,7 +2,7 @@
 title: 'Create Amazing Mobile Apps with Flutter and WebView Integration'
 description: '<p>Introduction: In today&#8217;s digital age, having a mobile app for your website can greatly enhance user experience and engagement. Flutter, a popular UI toolkit, allows developers to create beautiful and high-performance mobile apps for both Android and iOS platforms. In this blog post, we will guide you through the process of integrating a WebView into [&hellip;]</p>
 '
-pubDate: 'Monday, August 28, 2023'
+pubDate: 'June 11, 2023'
 heroImage: '/data/post-14-image.jpg'
 ---
 

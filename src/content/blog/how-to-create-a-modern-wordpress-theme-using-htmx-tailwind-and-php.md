@@ -2,7 +2,7 @@
 title: 'How to Create a Modern WordPress Theme Using HTMX, Tailwind, and PHP'
 description: '<p>To successfully create a modern WordPress theme using HTMX, Tailwind, and PHP, the first step involves setting up your development environment. This begins with installing and configuring the necessary tools and technologies. Start by installing Node.js, which is integral for managing packages through its npm package manager. Additionally, Composer should be installed for handling PHP [&hellip;]</p>
 '
-pubDate: 'Friday, August 23, 2024'
+pubDate: 'June 23, 2024'
 heroImage: '/data/post-4-image.jpg'
 ---
 

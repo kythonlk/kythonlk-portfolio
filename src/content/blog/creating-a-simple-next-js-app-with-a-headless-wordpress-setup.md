@@ -2,7 +2,7 @@
 title: 'Creating a Simple Next.js App with a Headless WordPress Setup'
 description: '<p>Introduction Are you looking to create a modern and dynamic website that combines the power of Next.js with the versatility of WordPress? Look no further! In this blog post, we will guide you through the process of building a simple Next.js app using a headless WordPress setup. This powerful combination allows you to take advantage [&hellip;]</p>
 '
-pubDate: 'Tuesday, August 22, 2023'
+pubDate: 'Tuesday, August 22, 2024'
 heroImage: '/data/post-15-image.jpg'
 ---
 

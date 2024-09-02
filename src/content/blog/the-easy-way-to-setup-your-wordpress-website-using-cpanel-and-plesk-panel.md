@@ -2,7 +2,7 @@
 title: 'The Easy Way to Setup Your WordPress Website Using cPanel and Plesk Panel'
 description: '<p>Introduction Welcome to our blog, where we make website setup a breeze! In this post, we will guide you through the step-by-step process of setting up your WordPress website using cPanel or Plesk Panel. With these powerful control panels, you can have your website up and running in no time. So, let&#8217;s dive right in [&hellip;]</p>
 '
-pubDate: 'Tuesday, August 22, 2023'
+pubDate: 'June 08, 2023'
 heroImage: '/data/post-17-image.jpg'
 ---
 

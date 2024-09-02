@@ -1,8 +1,7 @@
 ---
 title: 'How to Set Up a Better Terminal with Warp, jq, fzf, grep, and nvim'
-description: '<p>Introduction to Modern Terminal Tools The modern command-line environment has seen the development of various powerful tools designed to enhance productivity and streamline workflow efficiency. This section aims to introduce some of these indispensable utilities that form the backbone of an optimized terminal setup. First, we have Warp, an advanced terminal emulator that prioritizes speed [&hellip;]</p>
-'
-pubDate: 'Friday, August 23, 2024'
+description: '<p>Introduction to Modern Terminal Tools The modern command-line environment has seen the development of various powerful tools designed to enhance productivity and streamline workflow efficiency. This section aims to introduce some of these indispensable utilities that form the backbone of an optimized terminal setup. First, we have Warp, an advanced terminal emulator that prioritizes speed [&hellip;]</p>'
+pubDate: 'July 26, 2024'
 heroImage: '/data/post-3-image.jpg'
 ---
 

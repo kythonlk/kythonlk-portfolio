@@ -2,7 +2,7 @@
 title: 'Boosting Your WordPress Theme with htmx: A Game-Changer for Your Website'
 description: '<p>Adding htmx to Your WordPress Theme for Interactive Web Experiences As a developer, you&#8217;re likely familiar with the power of JavaScript in creating dynamic and interactive web experiences. However, integrating JavaScript libraries seamlessly into a content management system like WordPress can be a different challenge altogether. In this article, we&#8217;ll explore how to integrate the [&hellip;]</p>
 '
-pubDate: 'Monday, August 28, 2023'
+pubDate: 'Monday, August 03, 2024'
 heroImage: '/data/post-12-image.jpg'
 ---
 
