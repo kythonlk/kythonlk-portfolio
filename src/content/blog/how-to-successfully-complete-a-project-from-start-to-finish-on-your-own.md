@@ -1,8 +1,8 @@
 ---
 title: 'How to Successfully Complete a Software Project from Start to Finish on Your Own'
 description: 'How to Successfully Complete a Software Project from Start to Finish on Your Own'
-pubDate: 'Monday, September 23, 2024'
-heroImage: '/data/post-3-image.jpg'
+pubDate: 'Monday, September 02, 2024'
+heroImage: '/data/gh.png'
 ---
 
 Hey there! Tackling a software project by yourself can be exciting but also a bit intimidating. Whether you're building a new app, developing a website, or creating a tool, the process can feel overwhelming. But don’t worry—I’m here to guide you through it, step by step, using simple and straightforward language. Let’s jump in!
