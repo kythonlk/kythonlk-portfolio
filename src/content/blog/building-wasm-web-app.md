@@ -3,7 +3,7 @@ title: 'Building Super Web Apps: The Power of WebAssembly, Go, HTML, and JavaScr
 description: '<p>RWebAssembly, commonly known as Wasm, represents a significant advancement in web technology, enabling developers to create high-performance applications that can be executed within web browsers. Unlike traditional JavaScript, which is an interpreted language, WebAssembly is a binary instruction format that allows code written in various programming languages, such as C, C++, and Go, to be compiled into a low-level binary format. This offers substantial performance improvements, as Wasm runs at near-native speed, making it particularly beneficial for certain use cases. </p>
 '
 pubDate: 'December 12, 2024'
-heroImage: '/data/post-8-image.jpg'
+heroImage: '/data/post-99.png'
 ---
 
 ###/home/kythonlk/Downloads/golang-webassembly-banner.png Introduction to WebAssembly and Its Role in Modern Web Development
