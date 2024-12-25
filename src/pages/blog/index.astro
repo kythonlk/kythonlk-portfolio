@@ -13,14 +13,14 @@ const posts = (await getCollection('blog')).sort(
 ---
 
 <Layout>
-  <section class="py-12 bg-gray-900/20 text-gray-900">
-    <div class="container mx-auto px-4 md:px-6 lg:px-8">
+  <section class="py-12 bg-gray-900/20 text-gray-900 mt-[-120px]">
+    <div class="container mx-auto px-4 md:px-6 lg:px-8 mt-[100px]">
       <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> 
 					{
 						posts.map((post) => (
-            <li class="bg-white/60 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out ">
+            <li class="bg-white/60 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl motion-preset-blur-up">
 								<a href={`/blog/${post.slug}/`}>
-									<img width={720} height={360} src={post.data.heroImage} alt="" />
+									<img width={720} height={360} src={post.data.heroImage} alt="" class="w-full h-60 object-cover border" />
 									<h4 class="p-4 text-xl">{post.data.title}</h4>
 									<p class="px-4">
 										<FormattedDate date={post.data.pubDate} />

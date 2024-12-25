@@ -1,0 +1,256 @@
+import { useState, useEffect, useCallback } from 'react';
+import gh from '../images/git.svg'
+import Img1 from '../images/work-1.webp' // albadr, php , wordpress , boostrap5 , ACF , jQuery , js
+import Img2 from '../images/work-2.webp' // becacakate, php , wordpress , boostrap5 , ACF , jQuery , js
+import Img3 from '../images/work-3.webp' // crizalapparel, php , wordpress , boostrap5 , ACF , jQuery , js , 
+import Img4 from '../images/work-4.webp' // advance wordpress search , php , Tailwind , jQuery , htmx , php
+import Img5 from '../images/work-5.webp' // dhabione , php , boostrap5 , jQuery  , php , wordpress , react , sass , ts , ts
+import Img6 from '../images/work-6.webp' // guaranteed_lowest_price , php , wordpress , boostrap5 , ACF , jQuery , js
+import Img7 from '../images/work-7.webp' // Warranty-Option-For-Woocommerce , php , wordpress , boostrap5 , ACF , jQuery , js
+import Img8 from '../images/work-8.webp' // erp React , nextjs , tailwind , go , mongodb , Postgres ,Docker , aws , github ci /cd
+import Img9 from '../images/work-9.webp' // extraco , php , boostrap5 , jQuery  , php , wordpress , react , sass , ts , ts
+import Img10 from '../images/work-10.webp' // my finance manager React  , tailwind , localStorage , js , ts
+import Img11 from '../images/work-11.webp' // fixperts dashbord React  , tailwind , js , ts , go , c++ win api , Postgres , sqlite , focus crm api
+import Img12 from '../images/work-12.webp' // flymax Global React  , tailwind , localStorage , js , ts , Astro
+import Img13 from '../images/work-13.webp' // fast req Go , Rust, json
+import Img14 from '../images/work-14.webp' // beverlyvilla.lk , php , wordpress , boostrap5 , ACF , jQuery , js
+import Img15 from '../images/work-15.webp' // localStorage client js , ts
+import Img16 from '../images/work-16.webp' // localStorage client usage
+import Img17 from '../images/work-17.webp' // milton, php , wordpress , boostrap5 , ACF , jQuery , js
+import Img18 from '../images/work-18.webp' // nexcode  React  , tailwind , localStorage , js , ts
+import Img19 from '../images/work-19.webp' // fixperts quicklink nextjs , tailwind , js , ts , go  , Postgres , focus crm api , telr api
+import Img20 from '../images/work-20.webp' // ruwanijayarathnejuwelaries, php , wordpress , boostrap5 , ACF , jQuery , js
+import Img21 from '../images/work-21.webp' // shop.tinylux.ae nextjs , tailwind , js , ts , Postgres , Stripe
+import Img22 from '../images/work-22.webp' // terminal my portfolio in terminal like posix  , tailwind , js  , go , wasm
+import Img23 from '../images/work-23.webp' // used  texasfurniture uae, php , wordpress , boostrap5 , ACF , jQuery , js
+import Img24 from '../images/work-24.webp' // tinylux invoice React  , tailwind , localStorage , js , ts
+import Img25 from '../images/work-25.webp' // Tinylux , php , wordpress , Tailwind , jQuery , js , react
+import Img26 from '../images/work-26.webp' // task-reminder React  , tailwind , localStorage , js , ts
+import Img27 from '../images/work-27.webp' // dev.kythonlk.com React  , tailwind , localStorage , js , ts
+import Img28 from '../images/work-28.webp' // excel to sql React  , tailwind , localStorage , js , ts
+
+interface Project {
+  name: string
+  description: string
+  link: string
+  tags: string[]
+  image: ImageMetadata
+}
+
+interface ProjectCategory {
+  [key: string]: Project[]
+}
+
+const projects: ProjectCategory = {
+  office: [
+    { name: "Dhabione", description: "A high-traffic e-commerce platform built with WordPress, serving over 10k daily users.", link: "https://dhabione.com", tags: ["WordPress", "WooCommerce", "Bootstrap"], image: Img5 },
+    { name: "Extraco", description: "Corporate website for Extraco, showcasing their services and expertise.", link: "https://extraco.ae/", tags: ["WordPress", "MySQL", "PHP", "Tailwind", "jQuery"], image: Img9 },
+    { name: "Albadr", description: "Business website for Albadr Company, featuring a modern design and dynamic content.", link: "https://albadr.ae/", tags: ["WordPress", "MySQL", "PHP", "Tailwind", "jQuery"], image: Img1 },
+    { name: "Guaranteed Lowest Price", description: "A WordPress plugin to ensure customers receive the lowest possible price on products.", link: "https://github.com/Kythonlk/guaranteed_lowest_price", tags: ["WordPress", "E-commerce"], image: Img6 },
+    { name: "Warranty Option For WooCommerce", description: "WooCommerce plugin to add and manage product warranty options seamlessly.", link: "https://github.com/Kythonlk/Warranty-Option-For-Woocommerce", tags: ["WordPress", "WooCommerce"], image: Img7 },
+    { name: "Excel to SQL", description: "React-based tool to convert Excel data into SQL queries effortlessly.", link: "https://excel-sql.netlify.app/", tags: ["React", "SQL", "Excel"], image: Img28 },
+    { name: "Milton", description: "Robust e-commerce website tailored for Milton, managing 10k daily users.", link: "https://milton.ae", tags: ["WordPress", "WooCommerce", "Bootstrap"], image: Img17 },
+    { name: "Fixperts Quicklink", description: "Custom payment quicklink application developed for Fixperts company operations.", link: "#", tags: ["React", "Next.js", "Tailwind", "Go", "MSSQL"], image: Img19 },
+    { name: "LocalStorage Client", description: "An npm package for simplified localStorage management in TypeScript.", link: "https://github.com/Kythonlk/LocalStorageClient", tags: ["TypeScript", "NPM", "State management"], image: Img15 },
+    {
+      name: "Fixperts Dashboard",
+      description: "Comprehensive dashboard for Fixperts company with advanced APIs integration for CRM and Postgres data management.",
+      tags: ["React", "Tailwind CSS", "Go", "C++", "Postgres", "SQLite", "Focus CRM API"],
+      link: "https://fixperts-dashboard.netlify.app/",
+      image: Img11,
+    },
+  ],
+  client: [
+    { name: "Tinylux Ecommerce", description: "Next.js-powered e-commerce platform with Go backend and Stripe integration.", link: "https://shop.tinylux.ae", tags: ["Go", "E-commerce", "React", "Next.js", "Postgres", "Stripe"], image: Img21 },
+    { name: "Tinylux", description: "Service-focused website for Tinylux, built with WordPress and WooCommerce.", link: "https://tinylux.ae", tags: ["WordPress", "WooCommerce", "Bootstrap"], image: Img25 },
+    { name: "Tinylux Invoice", description: "Invoice generator app for Tinylux, built with React and optimized for efficiency.", link: "https://babylux-invoice.vercel.app", tags: ["React", "Finance", "Invoice", "PDF"], image: Img24 },
+    { name: "Beccakate", description: "Photography portfolio website for Beccakate, featuring elegant designs.", link: "https://beccakate.com", tags: ["WordPress", "Elementor", "Bootstrap"], image: Img2 },
+    {
+      name: "Flymax Global",
+      description: "Interactive global service website built with modern React and Astro frameworks for high performance and responsiveness.",
+      tags: ["React", "Tailwind CSS", "Astro", "LocalStorage"],
+      link: "https://flymaxglobal.com/",
+      image: Img12,
+    },
+    { name: "Grand ERP", description: "A custom ERP solution tailored for a UAE client, enhancing operational efficiency.", link: "#", tags: ["React", "Next.js", "Tailwind", "Go", "MSSQL"], image: Img8 },
+    { name: "Crizal", description: "E-commerce platform for Sri Lanka-based Crizal, built on WordPress.", link: "https://crizalapparel.lk", tags: ["WordPress", "WooCommerce", "Bootstrap"], image: Img3 },
+    {
+      name: "Advanced WordPress Search",
+      description: "Custom WordPress search feature built with advanced technologies for better accuracy and user experience.",
+      tags: ["WordPress", "PHP", "Tailwind CSS", "jQuery", "HTMX"],
+      link: "https://spuiterijpres.nl/product/spuitbus//",
+      image: Img4,
+    },
+    {
+      name: "Texas Furniture UAE",
+      description: "E-commerce site for UAE-based furniture retailer, crafted with WordPress and advanced customization using ACF.",
+      tags: ["WordPress", "Bootstrap", "ACF", "jQuery", "JavaScript"],
+      link: "https://usedfurnituretexas.com/",
+      image: Img23,
+    },
+    { name: "Business Portfolio Template", description: "Astro-based portfolio website template, ideal for businesses.", link: "https://dev.kythonlk.com", tags: ["Astro", "Portfolio"], image: Img27 },
+  ],
+  hobby: [
+    { name: "API Testing Client", description: "A command-line API testing tool built with Go, featuring a terminal UI.", link: "https://github.com/Kythonlk/Fastreq", tags: ["Go", "CLI", "TUI", "JSON"], image: Img13 },
+    {
+      name: "Terminal Portfolio",
+      description: "A unique portfolio website mimicking a terminal experience with interactive POSIX-like commands.",
+      tags: ["Tailwind CSS", "JavaScript", "Go", "WASM"],
+      link: "https://kythonlk.github.io/terminal/",
+      image: Img22,
+    },
+    { name: "Task-Reminder", description: "A task management app with built-in reminders, built using JavaScript and Tailwind CSS.", link: "https://kythonlk.github.io/task-reminder/", tags: ["JavaScript", "HTML", "Tailwind CSS", "localStorage"], image: Img26 },
+    { name: "Finance Management", description: "Personal finance management app using React and localStorage for tracking expenses.", link: "https://my-finance-manager.netlify.app/", tags: ["React", "Finance", "localStorage"], image: Img10 },
+  ],
+};
+export default function Projects() {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = async (project: Project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = async () => {
+    if (document.startViewTransition) {
+      await document.startViewTransition(async () => {
+        setIsModalOpen(false);
+        setTimeout(() => setSelectedProject(null), 300);
+      }).ready;
+    } else {
+      setIsModalOpen(false);
+      setSelectedProject(null);
+    }
+  };
+
+  const handleClickOutside = useCallback((event: MouseEvent) => {
+    const modalContent = document.querySelector('.modal-content');
+    if (modalContent && !modalContent.contains(event.target as Node)) {
+      closeModal();
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isModalOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isModalOpen, handleClickOutside]);
+
+  return (
+    <section className="py-12 bg-gray-900/20 text-gray-900 mt-[-120px]">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 mt-[100px]">
+        {Object.entries(projects).map(([category, projectList]) => (
+          <div key={category} className="mb-12">
+            <h3 className="text-3xl font-bold text-gray-900 mb-6 capitalize">{category} Projects</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {projectList.map((project, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-100/30 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 motion-preset-blur-up"
+                  style={{
+                    viewTransitionName: selectedProject?.name === project.name ? 'project-card' : ''
+                  }}
+                >
+                  <img
+                    src={project.image.src}
+                    alt={project.name}
+                    width={400}
+                    className="w-full h-60 object-cover"
+                    style={{
+                      viewTransitionName: selectedProject?.name === project.name ? 'project-image' : ''
+                    }}
+                  />
+                  <div className="p-4">
+                    <h4
+                      className="text-xl font-semibold text-gray-900 mb-2"
+                      style={{
+                        viewTransitionName: selectedProject?.name === project.name ? 'project-title' : ''
+                      }}
+                    >
+                      {project.name}
+                    </h4>
+                    <p className="text-gray-600 mb-4 line-clamp-2">{project.description}</p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.tags.map(tag => (
+                        <span key={tag} className="bg-gray-200 text-gray-700 px-2 py-1 rounded-full text-xs">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <button
+                        onClick={() => openModal(project)}
+                        className="text-blue-600 hover:text-blue-800 text-lg bg-gray-100 px-4 py-1 rounded-xl"
+                      >
+                        View Details
+                      </button>
+                      {project.link && project.link !== '#' && (
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-gray-600 hover:text-gray-800"
+                        >
+                          Visit Site
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+      {isModalOpen && selectedProject && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 ">
+          <div
+            className="modal-content bg-white rounded-lg p-12 max-w-3xl w-full relative  motion-scale-in-[0.5] motion-translate-x-in-[-20%] motion-translate-y-in-[20%] motion-opacity-in-[0%] motion-blur-in-[10px] motion-duration-[0.35s] motion-duration-[0.53s]/scale motion-duration-[0.53s]/translate motion-duration-[0.63s]/rotate"
+          >
+            <button
+              onClick={closeModal}
+              className="absolute top-2 right-4 text-gray-400 hover:text-gray-600 text-4xl"
+            >
+              &times;
+            </button>
+            <img
+              src={selectedProject.image.src}
+              alt={selectedProject.name}
+              className="w-full h-full max-h-96 object-cover rounded-t-lg mb-4"
+              style={{ viewTransitionName: 'project-image' }}
+            />
+            <h4
+              className="text-2xl font-bold text-gray-900 mb-2"
+              style={{ viewTransitionName: 'project-title' }}
+            >
+              {selectedProject.name}
+            </h4>
+            <p className="text-gray-600 mb-4">{selectedProject.description}</p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              {selectedProject.tags.map(tag => (
+                <span
+                  key={tag}
+                  className="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <a
+              href={selectedProject.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg text-lg hover:bg-blue-700"
+            >
+              Visit Project
+            </a>
+          </div>
+        </div>
+      )}
+    </section>
+  );
+}
