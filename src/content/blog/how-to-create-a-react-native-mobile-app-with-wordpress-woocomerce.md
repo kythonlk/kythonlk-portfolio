@@ -1,7 +1,9 @@
 ---
-title: 'Building a Real-Time Application with '
+title: 'How to Build a React Native WooCommerce App'
+description: '<p>Ready to build a React Native app with a WooCommerce-powered products page? This fun, meme-filled tutorial takes you step-by-step through the process, from setting up your project to fetching products, adding navigation, and even testing your app. [&hellip;]</p>
+'
 pubDate: 'Saturday, January 1, 2025'
-heroImage: '/data/post-2-image.jpg'
+heroImage: '/data/post-21.png'
 ---
 
 # So You Wanna Build a React Native App? Let's Woo-Commerce it Up! 🎉
