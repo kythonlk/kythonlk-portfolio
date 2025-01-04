@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+
+
+Sitemap: https://kythonlk.com/sitemap-index.xml
