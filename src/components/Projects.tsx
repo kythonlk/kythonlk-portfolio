@@ -249,10 +249,7 @@ const Projects = () => {
           {getFilteredProjects().map((project, index) => (
             <div
               key={index}
-              className="bg-gray-100/30 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
-              style={{
-                viewTransitionName: selectedProject?.name === project.name ? 'project-card' : ''
-              }}
+              className="bg-gray-100/30 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow w-full flex flex-col justify-center duration-300"
             >
               <button
                 onClick={() => setSelectedProject(project)}
@@ -260,11 +257,8 @@ const Projects = () => {
                 <img
                   src={project.image.src}
                   alt={project.name}
-                  width={400}
-                  className="w-full h-60 object-cover"
-                  style={{
-                    viewTransitionName: selectedProject?.name === project.name ? 'project-image' : ''
-                  }}
+                  className="min-w-full h-60 object-cover"
+                  onLoad={() => handleImageLoad(project.image.src)}
                 />
               </button>
 
