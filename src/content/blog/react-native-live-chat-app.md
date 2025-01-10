@@ -1,5 +1,5 @@
 ---
-title: 'Maximizing Productivity with LazyVim and Windows Terminal'
+title: 'How to Create a React Native Live Chat App with a Go Backend Using WebSocket'
 description: 'How to Create a React Native Live Chat App with a Go Backend Using WebSocket'
 pubDate: 'Jan 10, 2025'
 heroImage: '/data/post-2-image.jpg'
@@ -124,7 +124,7 @@ Now let’s create the React Native app that will connect to our Go WebSocket se
 1. **Create a New React Native Project** Run the following command to create a new project:
 
    ```bash
-   npx react-native init ChatApp
+   npx @react-native-community/cli@latest init ChatApp
    cd ChatApp
    ```
 
