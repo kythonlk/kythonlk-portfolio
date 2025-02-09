@@ -136,6 +136,10 @@ hr {
 	}
 }
 
+hr {
+	margin: 1.5em 0;
+}
+
 .sr-only {
 	border: 0;
 	padding: 0;
