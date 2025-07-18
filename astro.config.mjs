@@ -6,6 +6,6 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://kythonlk.com',
+  site: 'https://kythonlk.tech',
   integrations: [mdx(), sitemap(), tailwind(), react()]
 });
