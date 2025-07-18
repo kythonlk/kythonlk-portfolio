@@ -2,4 +2,4 @@ User-agent: *
 Disallow:
 
 
-Sitemap: https://kythonlk.com/sitemap-index.xml
+Sitemap: https://kythonlk.tech/sitemap-index.xml
