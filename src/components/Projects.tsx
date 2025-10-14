@@ -29,6 +29,9 @@ import Img26 from '../images/work-26.webp' // task-reminder React  , tailwind , 
 import Img27 from '../images/work-27.webp' // dev.kythonlk.com React  , tailwind , localStorage , js , ts
 import Img28 from '../images/work-28.webp' // excel to sql React  , tailwind , localStorage , js , ts
 import Img29 from '../images/work-29.webp' // Real estate website ,  React  , tailwind, ts , nextjs ,js , property.kythonlk.com
+import Img30 from '../images/work-30.webp'
+import Img31 from '../images/work-31.webp'
+import Img32 from '../images/work-32.webp'
 
 interface Project {
   name: string
@@ -54,6 +57,8 @@ const Projects = () => {
       { name: "Dhabione", description: "A high-traffic e-commerce platform built with WordPress, serving over 10k daily users.", link: "https://dhabione.com", tags: ["WordPress", "WooCommerce", "Bootstrap", "PHP", "MySQL", "JavaScript", "jQuery", "PHP", "ACF"], image: Img5 },
       { name: "Extraco", description: "Corporate website for Extraco, showcasing their services and expertise.", link: "https://extraco.ae/", tags: ["WordPress", "MySQL", "PHP", "Bootstrap", "jQuery", "PHP", "ACF", "JavaScript"], image: Img9 },
       { name: "Albadr", description: "Business website for Albadr Company, featuring a modern design and dynamic content.", link: "https://albadr.ae/", tags: ["WordPress", "MySQL", "PHP", "Bootstrap", "jQuery", "PHP", "ACF", "JavaScript"], image: Img1 },
+      { name: "Terracore", description: "Business website for Terracore, showcasing their services and expertise.", link: "https://terracoreme.ae/", tags: ["React", "Vite", "Nginx", "Tailwind", "TypeScript"], image: Img31 },
+      { name: "GOC", description: "Business website for GOC, showcasing their services and expertise.", link: "https://goc.ae/", tags: ["React", "Vite", "Nginx", "Tailwind", "TypeScript"], image: Img32 },
       { name: "Guaranteed Lowest Price", description: "A WordPress plugin to ensure customers receive the lowest possible price on products.", link: "https://github.com/Kythonlk/guaranteed_lowest_price", tags: ["WordPress", "E-commerce"], image: Img6 },
       { name: "Warranty Option For WooCommerce", description: "WooCommerce plugin to add and manage product warranty options seamlessly.", link: "https://github.com/Kythonlk/Warranty-Option-For-Woocommerce", tags: ["WordPress", "WooCommerce"], image: Img7 },
       { name: "Excel to SQL", description: "React-based tool to convert Excel data into SQL queries effortlessly.", link: "https://excel-sql.netlify.app/", tags: ["React", "SQL", "Excel", "JavaScript", "jQuery", "PHP", "ACF"], image: Img28 },
@@ -84,6 +89,7 @@ const Projects = () => {
       },
     ],
     client: [
+      { name: "Woodberry Designs Project Management System", description: "A project management system for Woodberry Designs, including projects, item, company, client and many managment in one place daily pending project reminder via whatsapp for managment and workers.", link: "https://woodberry-designs.vercel.app/", tags: ["React", "Tailwind", "Go", "Whatsapp", "Express.js", "Postgres"], image: Img30 },
       { name: "Tinylux Ecommerce", description: "Next.js-powered e-commerce platform with Go backend and Stripe integration.", link: "https://shop.tinylux.ae", tags: ["Go", "E-commerce", "React", "Next.js", "Postgres", "Stripe"], image: Img21 },
       { name: "Tinylux", description: "Service-focused website for Tinylux, built with WordPress and WooCommerce.", link: "https://tinylux.ae", tags: ["WordPress", "WooCommerce", "Bootstrap"], image: Img25 },
       { name: "Tinylux Invoice", description: "Invoice generator app for Tinylux, built with React and optimized for efficiency.", link: "https://babylux-invoice.vercel.app", tags: ["React", "Finance", "Invoice", "PDF"], image: Img24 },
@@ -258,7 +264,6 @@ const Projects = () => {
                   src={project.image.src}
                   alt={project.name}
                   className="min-w-full h-60 object-cover"
-                  onLoad={() => handleImageLoad(project.image.src)}
                 />
               </button>
 
