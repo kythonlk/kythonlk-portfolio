@@ -20,11 +20,30 @@ const posts = (await getCollection('blog')).sort(
 						posts.map((post) => (
             <li class="bg-white/60 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl motion-preset-blur-up">
 								<a href={`/blog/${post.slug}/`}>
-									<img width={720} height={360} src={post.data.heroImage} alt="" class="w-full h-60 object-cover border" />
-									<h4 class="p-4 text-xl">{post.data.title}</h4>
-									<p class="px-4">
-										<FormattedDate date={post.data.pubDate} />
-									</p>
+									<img
+										width={720}
+										height={360}
+										src={post.data.heroImage ?? '/blog-placeholder-1.jpg'}
+										alt=""
+										class="w-full h-60 object-cover border"
+									/>
+									<div class="p-4 space-y-2">
+										<div class="flex items-center gap-2 text-xs uppercase tracking-wide text-gray-700">
+											{post.data.postType === 'cyber-security-news' ? (
+												<span class="inline-flex items-center rounded-full border border-emerald-600/40 bg-emerald-100/70 px-2 py-1 text-[0.65rem] font-semibold text-emerald-800">
+													cyber security news
+												</span>
+											) : (
+												<span class="inline-flex items-center rounded-full border border-gray-600/30 bg-gray-100 px-2 py-1 text-[0.65rem] font-semibold text-gray-700">
+													general
+												</span>
+											)}
+										</div>
+										<h4 class="text-xl">{post.data.title}</h4>
+										<p>
+											<FormattedDate date={post.data.pubDate} />
+										</p>
+									</div>
 								</a>
 							</li>
 						))
