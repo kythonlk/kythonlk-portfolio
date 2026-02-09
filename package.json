@@ -1,1 +1,28 @@
-{"name":"kythonlk","type":"module","version":"0.0.1","scripts":{"dev":"astro dev","start":"astro dev","build":"astro build","preview":"astro preview","astro":"astro","lint":"astro check","type-check":"tsc --noEmit"},"dependencies":{"@astrojs/check":"^0.10.0","@astrojs/mdx":"^3.2.0","@astrojs/react":"^4.2.0","@astrojs/rss":"^4.1.1","@astrojs/sitemap":"^3.2.1","@astrojs/tailwind":"^5.2.0","astro":"^5.0.0","react":"^19.0.0","react-dom":"^19.0.0","tailwindcss":"^3.4.13","tailwindcss-motion":"^1.0.0","three":"^0.128.0","typescript":"^5.6.3"}}
+{
+  "name": "kythonlk",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "astro check",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.0.3",
+    "@astrojs/react": "^4.4.2",
+    "@astrojs/rss": "^4.0.15",
+    "@astrojs/sitemap": "^3.7.0",
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^5.17.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^3.4.17",
+    "tailwindcss-motion": "^1.0.6",
+    "three": "^0.182.0",
+    "typescript": "^5.9.3"
+  }
+}

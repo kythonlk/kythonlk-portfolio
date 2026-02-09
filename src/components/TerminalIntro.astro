@@ -1,0 +1,260 @@
+---
+---
+
+<section id="terminal-intro" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+  <!-- Animated background grid -->
+  <div class="absolute inset-0 cyber-grid opacity-20"></div>
+  
+  <!-- Floating geometric shapes -->
+  <div class="absolute top-20 left-20 w-20 h-20 border border-neon-cyan rounded-lg floating opacity-30"></div>
+  <div class="absolute bottom-32 right-32 w-16 h-16 border border-neon-pink rotate-45 floating opacity-20" style="animation-delay: 1s;"></div>
+  <div class="absolute top-1/2 left-10 w-12 h-12 border border-neon-purple rounded-full floating opacity-25" style="animation-delay: 2s;"></div>
+  
+  <div class="container mx-auto px-6 z-10">
+    <div class="max-w-4xl mx-auto">
+      <!-- Terminal window -->
+      <div class="bg-gray-900/90 backdrop-blur-lg rounded-lg border border-neon-cyan shadow-2xl overflow-hidden neon-border">
+        <!-- Terminal header -->
+        <div class="bg-gray-800/50 px-4 py-3 border-b border-gray-700 flex items-center gap-2">
+          <div class="flex gap-2">
+            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+          </div>
+          <div class="text-gray-400 text-sm ml-4 font-mono">
+            kythonlk@portfolio:~$
+          </div>
+        </div>
+        
+        <!-- Terminal content -->
+        <div class="p-6 font-mono text-sm leading-relaxed">
+          <!-- Command lines with typing animation -->
+          <div class="space-y-3">
+            <div class="flex items-center">
+              <span class="text-neon-green">kythonlk@portfolio</span>
+              <span class="text-gray-400">:</span>
+              <span class="text-neon-blue">~</span>
+              <span class="text-gray-400">$</span>
+              <span class="ml-2 text-white terminal-text" id="cmd-1" data-text="whoami"></span>
+              <span class="cursor-blink">|</span>
+            </div>
+            
+            <div class="text-neon-cyan hidden animate-text" id="result-1">
+              > Full-Stack Developer & Tech Enthusiast
+            </div>
+            
+            <div class="flex items-center hidden animate-text" id="cmd-2-container">
+              <span class="text-neon-green">kythonlk@portfolio</span>
+              <span class="text-gray-400">:</span>
+              <span class="text-neon-blue">~</span>
+              <span class="text-gray-400">$</span>
+              <span class="ml-2 text-white terminal-text" id="cmd-2" data-text="ls -la skills/"></span>
+              <span class="cursor-blink">|</span>
+            </div>
+            
+            <div class="hidden animate-text" id="result-2">
+              <div class="text-neon-cyan">total 42</div>
+              <div class="text-gray-300">drwxr-xr-x  2 kythonlk  staff   6 Jan 14 11:30 <span class="text-neon-yellow">languages/</span></div>
+              <div class="text-gray-300">drwxr-xr-x  2 kythonlk  staff   8 Jan 14 11:30 <span class="text-neon-yellow">frameworks/</span></div>
+              <div class="text-gray-300">drwxr-xr-x  2 kythonlk  staff   5 Jan 14 11:30 <span class="text-neon-yellow">databases/</span></div>
+              <div class="text-gray-300">drwxr-xr-x  2 kythonlk  staff   7 Jan 14 11:30 <span class="text-neon-yellow">devops/</span></div>
+              <div class="text-gray-300">-rw-r--r--  1 kythonlk  staff  100 Jan 14 11:30 <span class="text-neon-pink">experience.txt</span></div>
+            </div>
+            
+            <div class="flex items-center hidden animate-text" id="cmd-3-container">
+              <span class="text-neon-green">kythonlk@portfolio</span>
+              <span class="text-gray-400">:</span>
+              <span class="text-neon-blue">~</span>
+              <span class="text-gray-400">$</span>
+              <span class="ml-2 text-white terminal-text" id="cmd-3" data-text="cat experience.txt"></span>
+              <span class="cursor-blink">|</span>
+            </div>
+            
+            <div class="hidden animate-text" id="result-3">
+              <div class="text-neon-cyan">════════════════════════════════════════</div>
+              <div class="text-white">
+                <span class="text-neon-pink">Experience:</span> 6+ years in software development
+              </div>
+              <div class="text-white">
+                <span class="text-neon-pink">Projects:</span> 100+ completed successfully
+              </div>
+              <div class="text-white">
+                <span class="text-neon-pink">Specialization:</span> Full-Stack Web & Mobile Development
+              </div>
+              <div class="text-white">
+                <span class="text-neon-pink">Location:</span> Sharjah, UAE
+              </div>
+              <div class="text-neon-cyan">════════════════════════════════════════</div>
+            </div>
+            
+            <div class="flex items-center hidden animate-text" id="cmd-4-container">
+              <span class="text-neon-green">kythonlk@portfolio</span>
+              <span class="text-gray-400">:</span>
+              <span class="text-neon-blue">~</span>
+              <span class="text-gray-400">$</span>
+              <span class="ml-2 text-white terminal-text" id="cmd-4" data-text="sudo apt install awesome-developer"></span>
+              <span class="cursor-blink">|</span>
+            </div>
+            
+            <div class="hidden animate-text" id="result-4">
+              <div class="text-neon-green">Reading package lists... Done</div>
+              <div class="text-neon-green">Building dependency tree... Done</div>
+              <div class="text-neon-green">awesome-developer is already installed and up to date!</div>
+              <div class="text-neon-yellow">💡 Ready to collaborate on your next project!</div>
+            </div>
+            
+            <!-- CTA Buttons -->
+            <div class="pt-6 hidden animate-text" id="cta-buttons">
+              <div class="flex flex-col sm:flex-row gap-4 items-center">
+                <button onclick="scrollToSection('about')" class="group px-6 py-3 bg-transparent border-2 border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-black transition-all duration-300 rounded font-semibold neon-border">
+                  <span class="group-hover:glitch-text" data-text="./explore_portfolio.sh">./explore_portfolio.sh</span>
+                </button>
+                <button onclick="scrollToSection('contact')" class="group px-6 py-3 bg-neon-pink border-2 border-neon-pink text-black hover:bg-transparent hover:text-neon-pink transition-all duration-300 rounded font-semibold">
+                  <span class="group-hover:glitch-text" data-text="./contact_me.sh">./contact_me.sh</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+class TerminalIntro {
+  constructor() {
+    this.commands = [
+      { id: 'cmd-1', result: 'result-1', next: 'cmd-2-container', delay: 1000 },
+      { id: 'cmd-2', result: 'result-2', next: 'cmd-3-container', delay: 1500 },
+      { id: 'cmd-3', result: 'result-3', next: 'cmd-4-container', delay: 2000 },
+      { id: 'cmd-4', result: 'result-4', next: 'cta-buttons', delay: 2500 }
+    ];
+    
+    this.currentCommand = 0;
+    this.init();
+  }
+  
+  init() {
+    setTimeout(() => this.startTyping(), 1000);
+  }
+  
+  startTyping() {
+    if (this.currentCommand >= this.commands.length) return;
+    
+    const command = this.commands[this.currentCommand];
+    const element = document.getElementById(command.id);
+    const text = element.dataset.text;
+    
+    this.typeText(element, text, () => {
+      this.showResult(command);
+    });
+  }
+  
+  typeText(element, text, callback) {
+    let i = 0;
+    const speed = 50;
+    
+    const typeInterval = setInterval(() => {
+      if (i < text.length) {
+        element.textContent = text.substring(0, i + 1);
+        i++;
+      } else {
+        clearInterval(typeInterval);
+        setTimeout(callback, 300);
+      }
+    }, speed);
+  }
+  
+  showResult(command) {
+    // Hide cursor from current command
+    const cursor = document.querySelector(`#${command.id} + .cursor-blink`);
+    if (cursor) cursor.style.display = 'none';
+    
+    // Show result
+    const result = document.getElementById(command.result);
+    result.classList.remove('hidden');
+    result.classList.add('animate-fade-in');
+    
+    setTimeout(() => {
+      // Show next command
+      if (command.next) {
+        const nextElement = document.getElementById(command.next);
+        nextElement.classList.remove('hidden');
+        nextElement.classList.add('animate-slide-up');
+      }
+      
+      this.currentCommand++;
+      setTimeout(() => this.startTyping(), 500);
+    }, command.delay);
+  }
+}
+
+// Scroll to section function
+window.scrollToSection = function(sectionId) {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
+// Initialize terminal intro
+function initTerminalIntro() {
+  new TerminalIntro();
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initTerminalIntro);
+} else {
+  initTerminalIntro();
+}
+
+// Also initialize on Astro page load
+document.addEventListener('astro:page-load', initTerminalIntro);
+</script>
+
+<style>
+.cursor-blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+.animate-text {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced neon glow for interactive elements */
+button.neon-border {
+  animation: pulse-neon 2s infinite;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px var(--neon-cyan);
+}
+
+/* Glitch effect on hover */
+.glitch-text:hover {
+  animation: glitch 0.3s infinite;
+}
+</style>

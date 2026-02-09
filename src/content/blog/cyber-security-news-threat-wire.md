@@ -1,15 +1,12 @@
 ---
 
-title: 'Threat Wire: Midnight Patch Notes From the Cyber Underground'
+title: 'Kythonlk Threat Wire: Midnight Patch Notes From the Cyber Underground'
 description: 'A gritty roundup of fresh exploits, blue-team wins, and lessons learned—built for my future cyber security news drops.'
 postType: 'cyber-security-news'
 pubDate: 'Monday, October 07, 2024'
 heroImage: '/data/post-23.jpg'
 
 ---
-
-# Threat Wire: Midnight Patch Notes From the Cyber Underground
-
 Welcome to **Threat Wire**, a cyber security news lane with a little more neon and a little less corporate fluff. This is where I’ll drop quick hits from the trenches—walkthroughs, experiments, and what I’m learning as I level up. Think of it as a logbook for the curious and the relentless.
 
 ## 🔒 Signal Boost: What I’m Tracking
