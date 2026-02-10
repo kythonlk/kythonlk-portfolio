@@ -5,7 +5,7 @@ title: 'Install Kali Linux on QEMU/KVM with Virtual Machine Manager'
 description: 'A step-by-step guide to setting up Kali Linux on QEMU/KVM with Virtual Machine Manager inside linux (debaian based) computer for cyber security.'
 postType: 'cyber-security-news'
 pubDate: 'Tuesday, February 10, 2026'
-heroImage: '/data/post-23.jpg'
+heroImage: '/data/cyber2.webp'
 
 ---
 
